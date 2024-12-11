@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Manashvi Banquet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="images/favicon.png" alt="Logo" /> Manashvi Banquet
+      </a>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#bookNow">Book Now</a>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+      <div class="container">
+        <h1 class="heading">Welcome to Manashvi Banquet</h1>
+
+        <div class="details">
+          <h2>Our Services</h2>
+          <p>
+            At Manashvi Banquet, we provide the perfect setting for your special
+            events. Whether it’s a wedding, a corporate event, or a family
+            gathering, we ensure every detail is taken care of to make your
+            occasion memorable.
+          </p>
+          <ul>
+            <li>Elegant Banquet Hall</li>
+            <li>Catering Services</li>
+            <li>Audio-Visual Equipment</li>
+            <li>Event Planning & Management</li>
+            <li>Decor & Floral Arrangements</li>
+            <li>Catering & Menu Customization</li>
+            <li>Venue Selection & Setup</li>
+            <li>And More...</li>
+          </ul>
+          <button class="see-more" onclick="toggleDetails()">See More</button>
+          <button
+            class="see-less"
+            style="display: none"
+            onclick="toggleDetails()"
+          >
+            See Less
+          </button>
+        </div>
+
+        <div class="cta">
+          <a href="#book-now" class="btn">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 Manashvi Banquet. All rights reserved.</p>
+    </footer>
+
+    <style>
+      /* General Style */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .header {
+        background: #f5f5f5;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+      }
+      .header .logo img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      .navbar a {
+        color: #333;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      .navbar .btn {
+        background: #007bff;
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      /* Home Section */
+      .home {
+        padding: 50px 20px;
+        background: #f4f4f4;
+      }
+      .home .heading {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .details {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .details h2 {
+        margin-top: 20px;
+        font-size: 24px;
+      }
+      .details p {
+        line-height: 1.6;
+      }
+      .details ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        display: none;
+      }
+      .cta {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .cta .btn {
+        background: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .cta .btn:hover {
+        background: #0056b3;
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        padding: 10px 20px;
+        background: #333;
+        color: #fff;
+      }
+
+      /* Toggle Details */
+      .see-more,
+      .see-less {
+        background: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .see-more:hover,
+      .see-less:hover {
+        background: #0056b3;
+      }
+
+      /* Additional Content */
+      .additional-content {
+        display: none;
+      }
+    </style>
+
+    <script>
+      // Function to toggle visibility of additional content
+      function toggleDetails() {
+        var list = document.querySelector(".details ul");
+        var seeMoreBtn = document.querySelector(".see-more");
+        var seeLessBtn = document.querySelector(".see-less");
+
+        // Toggle the list visibility and buttons
+        if (list.style.display === "none" || list.style.display === "") {
+          list.style.display = "block";
+          seeMoreBtn.style.display = "none";
+          seeLessBtn.style.display = "inline-block";
+        } else {
+          list.style.display = "none";
+          seeMoreBtn.style.display = "inline-block";
+          seeLessBtn.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

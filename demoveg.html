@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diamond Veg Pack</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px;
+        background-color: #444;
+        color: white;
+      }
+      form {
+        background-color: white;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        margin-top: 20px;
+        color: #444;
+      }
+      .section {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fafafa;
+      }
+      .section input[type="radio"] {
+        margin-right: 10px;
+      }
+      button {
+        background-color: #ff5722;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        margin: 20px auto;
+      }
+      button:hover {
+        background-color: #e64a19;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Diamond Veg Pack</h1>
+
+    <form id="diamondVegPackForm">
+      <!-- Main Course Menu -->
+      <h1>Main Course Menu</h1>
+
+      <h2>Rice</h2>
+      <label
+        ><input type="radio" name="rice" value="Steamed Rice" required />
+        Steamed Rice</label
+      ><br />
+      <label
+        ><input type="radio" name="rice" value="Jeera Rice" /> Jeera Rice</label
+      ><br />
+      <label
+        ><input type="radio" name="rice" value="Butter Rice" /> Butter
+        Rice</label
+      ><br />
+      <label
+        ><input type="radio" name="rice" value="Peas Pulao" /> Peas Pulao</label
+      ><br />
+      <label
+        ><input type="radio" name="rice" value="Veg. Pulao" /> Veg. Pulao</label
+      ><br />
+      <label
+        ><input type="radio" name="rice" value="Navrattan Pulao" /> Navrattan
+        Pulao</label
+      ><br />
+      <label
+        ><input type="radio" name="rice" value="Kashmiri Pulao" /> Kashmiri
+        Pulao</label
+      ><br />
+      <label
+        ><input type="radio" name="rice" value="Veg. Biryani" /> Veg.
+        Biryani</label
+      ><br />
+      <label
+        ><input type="radio" name="rice" value="Veg. Fried Rice" /> Veg. Fried
+        Rice</label
+      ><br />
+
+      <h2>Naan/Roti</h2>
+      <label
+        ><input type="radio" name="naan" value="Garlic Naan" required /> Garlic
+        Naan</label
+      ><br />
+      <label
+        ><input type="radio" name="naan" value="Butter Naan" /> Butter
+        Naan</label
+      ><br />
+      <label
+        ><input type="radio" name="naan" value="Plain Naan" /> Plain Naan</label
+      ><br />
+      <label
+        ><input type="radio" name="naan" value="Green Puri" /> Green Puri</label
+      ><br />
+      <label
+        ><input type="radio" name="naan" value="Vratta Puri" /> Vratta
+        Puri</label
+      ><br />
+      <label><input type="radio" name="naan" value="Pasta" /> Pasta</label
+      ><br />
+      <label
+        ><input type="radio" name="naan" value="Veg. Chowmein" /> Veg.
+        Chowmein</label
+      ><br />
+      <label
+        ><input type="radio" name="naan" value="Plain Roti" /> Plain Roti</label
+      ><br />
+
+      <h2>Dal</h2>
+      <label
+        ><input type="radio" name="dal" value="Paneer Yellow Dal" required />
+        Paneer Yellow Dal</label
+      ><br />
+      <label
+        ><input type="radio" name="dal" value="White Beans Curry" /> White Beans
+        Curry</label
+      ><br />
+      <label
+        ><input type="radio" name="dal" value="Black Dal Thakali Style" /> Black
+        Dal Thakali Style</label
+      ><br />
+      <label
+        ><input type="radio" name="dal" value="Dal Tadka" /> Dal Tadka</label
+      ><br />
+      <label
+        ><input type="radio" name="dal" value="Rajma Dal" /> Rajma Dal</label
+      ><br />
+
+      <h2>Vegetable Curry</h2>
+      <label
+        ><input
+          type="radio"
+          name="veg-curry"
+          value="Mixed Vegetable Dry (Seasonal)"
+          required
+        />
+        Mixed Vegetable Dry (Seasonal)</label
+      ><br />
+      <label
+        ><input type="radio" name="veg-curry" value="Mixed Vegetable Gravy" />
+        Mixed Vegetable Gravy</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="veg-curry"
+          value="Mixed Vegetable Jalfrezi"
+        />
+        Mixed Vegetable Jalfrezi</label
+      ><br />
+      <label
+        ><input type="radio" name="veg-curry" value="Aalu Tama" /> Aalu
+        Tama</label
+      ><br />
+      <label
+        ><input type="radio" name="veg-curry" value="Aalu Dum Achari" /> Aalu
+        Dum Achari</label
+      ><br />
+      <h2>Paneer Dishes</h2>
+      <label
+        ><input type="radio" name="paneer" value="Paneer Jalfrezi" required />
+        Paneer Jalfrezi</label
+      ><br />
+      <label
+        ><input type="radio" name="paneer" value="Paneer Butter Masala" />
+        Paneer Butter Masala</label
+      ><br />
+      <label
+        ><input type="radio" name="paneer" value="Pease Paneer" /> Pease
+        Paneer</label
+      ><br />
+      <label
+        ><input type="radio" name="paneer" value="Palak Paneer" /> Palak
+        Paneer</label
+      ><br />
+      <label
+        ><input type="radio" name="paneer" value="Malaya Kofta" /> Malaya
+        Kofta</label
+      ><br />
+      <label
+        ><input type="radio" name="paneer" value="Capsicum Paneer Bhujia" />
+        Capsicum Paneer Bhujia</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="paneer"
+          value="Paneer Mutter Mushroom Curry"
+        />
+        Paneer Mutter Mushroom Curry</label
+      ><br />
+
+      <h2>Mushroom Dishes</h2>
+      <label
+        ><input
+          type="radio"
+          name="mushroom"
+          value="Mutter Mushroom Curry"
+          required
+        />
+        Mutter Mushroom Curry</label
+      ><br />
+      <label
+        ><input type="radio" name="mushroom" value="Pease Mushroom" /> Pease
+        Mushroom</label
+      ><br />
+      <label
+        ><input type="radio" name="mushroom" value="Grilled Mushroom" /> Grilled
+        Mushroom</label
+      ><br />
+      <label
+        ><input type="radio" name="mushroom" value="Mushroom Chilly" /> Mushroom
+        Chilly</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="mushroom"
+          value="Mushroom with Hot Garlic Sauce"
+        />
+        Mushroom with Hot Garlic Sauce</label
+      ><br />
+
+      <h2>Seasonal Saag</h2>
+      <label
+        ><input type="radio" name="saag" value="Seasonal Saag" required />
+        Seasonal Saag</label
+      ><br />
+
+      <h2>Achar (Pickles)</h2>
+      <label
+        ><input type="radio" name="achar" value="Nepali Achar" required />
+        Nepali Achar</label
+      ><br />
+      <label
+        ><input type="radio" name="achar" value="Tomato Achar" /> Tomato
+        Achar</label
+      ><br />
+      <label
+        ><input type="radio" name="achar" value="Lapsi Achar" /> Lapsi
+        Achar</label
+      ><br />
+      <label
+        ><input type="radio" name="achar" value="Chana Chat" /> Chana
+        Chat</label
+      ><br />
+      <label
+        ><input type="radio" name="achar" value="Mithai Achar" /> Mithai
+        Achar</label
+      ><br />
+      <label
+        ><input type="radio" name="achar" value="Indian Mixed Achar" /> Indian
+        Mixed Achar</label
+      ><br />
+
+      <h2>Dry Papad</h2>
+      <label
+        ><input type="radio" name="papad" value="Dry Papad" required /> Dry
+        Papad</label
+      ><br />
+
+      <!-- Desserts Menu -->
+      <h1>Desserts Menu (Extra Cost)</h1>
+      <h2>Sweet Dishes</h2>
+      <label
+        ><input type="radio" name="dessert" value="Gulab Jamun" required />
+        Gulab Jamun</label
+      ><br />
+      <label
+        ><input type="radio" name="dessert" value="Rasgulla" /> Rasgulla</label
+      ><br />
+      <label
+        ><input type="radio" name="dessert" value="Rava Kesari" /> Rava
+        Kesari</label
+      ><br />
+      <label
+        ><input type="radio" name="dessert" value="Gajar Halwa" /> Gajar
+        Halwa</label
+      ><br />
+      <label><input type="radio" name="dessert" value="Kulfi" /> Kulfi</label
+      ><br />
+      <label
+        ><input type="radio" name="dessert" value="Ice Cream" /> Ice
+        Cream</label
+      ><br />
+
+      <!-- Soup Menu -->
+      <h1>Soup Menu</h1>
+      <label
+        ><input type="radio" name="soup" value="Tomato Soup" required /> Tomato
+        Soup</label
+      ><br />
+      <label
+        ><input type="radio" name="soup" value="Sweet Corn Soup" /> Sweet Corn
+        Soup</label
+      ><br />
+      <label
+        ><input type="radio" name="soup" value="Lentil Soup" /> Lentil
+        Soup</label
+      ><br />
+      <label
+        ><input type="radio" name="soup" value="Vegetable Soup" /> Vegetable
+        Soup</label
+      ><br />
+      <label
+        ><input type="radio" name="soup" value="Hot and Sour Soup" /> Hot and
+        Sour Soup</label
+      ><br />
+
+      <!-- Chaat Stall Menu -->
+      <h1>Chaat Stall (Extra Cost)</h1>
+      <label
+        ><input type="radio" name="chaat" value="Pani Puri" required /> Pani
+        Puri</label
+      ><br />
+      <label
+        ><input type="radio" name="chaat" value="Bhel Puri" /> Bhel Puri</label
+      ><br />
+      <label
+        ><input type="radio" name="chaat" value="Sev Puri" /> Sev Puri</label
+      ><br />
+      <label
+        ><input type="radio" name="chaat" value="Dahi Puri" /> Dahi Puri</label
+      ><br />
+      <label
+        ><input type="radio" name="chaat" value="Papdi Chaat" /> Papdi
+        Chaat</label
+      ><br />
+      <label
+        ><input type="radio" name="chaat" value="Aloo Tikki Chaat" /> Aloo Tikki
+        Chaat</label
+      ><br />
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </body>
+</html>

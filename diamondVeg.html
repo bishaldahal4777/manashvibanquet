@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diamond Non-Veg Pack</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px;
+        background-color: #444;
+        color: white;
+      }
+      form {
+        background-color: white;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h3 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      button {
+        background-color: #ff5722;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #e64a19;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Diamond Non-Veg Pack</h1>
+
+    <form>
+      <h2>Snacks (One item from each list)</h2>
+
+      <h3>1. Potato-based Snacks:</h3>
+      <input
+        type="radio"
+        id="aloo_potato"
+        name="potato_snack"
+        value="Aloo Potato"
+      />
+      <label for="aloo_potato">Aloo Potato</label><br />
+
+      <input
+        type="radio"
+        id="golden_potato_fry"
+        name="potato_snack"
+        value="Golden Potato Fry"
+      />
+      <label for="golden_potato_fry">Golden Potato Fry</label><br />
+
+      <input
+        type="radio"
+        id="french_fry"
+        name="potato_snack"
+        value="French Fry"
+      />
+      <label for="french_fry">French Fry</label><br />
+
+      <input
+        type="radio"
+        id="capsicum_pokado"
+        name="potato_snack"
+        value="Capsicum Pokado"
+      />
+      <label for="capsicum_pokado">Capsicum Pokado</label><br />
+
+      <input
+        type="radio"
+        id="onion_pakoda"
+        name="potato_snack"
+        value="Onion Pakoda"
+      />
+      <label for="onion_pakoda">Onion Pakoda</label><br />
+
+      <input
+        type="radio"
+        id="crispy_potato"
+        name="potato_snack"
+        value="Crispy Potato"
+      />
+      <label for="crispy_potato">Crispy Potato</label><br />
+
+      <input
+        type="radio"
+        id="wafer_chips"
+        name="potato_snack"
+        value="Wafer Chips"
+      />
+      <label for="wafer_chips">Wafer Chips</label><br />
+
+      <h3>2. Paneer-based Snacks:</h3>
+      <input
+        type="radio"
+        id="sesame_paneer_fry"
+        name="paneer_snack"
+        value="Sesame Paneer Fry"
+      />
+      <label for="sesame_paneer_fry">Sesame Paneer Fry</label><br />
+
+      <input
+        type="radio"
+        id="paneer_pakoda"
+        name="paneer_snack"
+        value="Paneer Pakoda"
+      />
+      <label for="paneer_pakoda">Paneer Pakoda</label><br />
+
+      <input
+        type="radio"
+        id="paneer_tikka"
+        name="paneer_snack"
+        value="Paneer Tikka"
+      />
+      <label for="paneer_tikka">Paneer Tikka</label><br />
+
+      <input
+        type="radio"
+        id="paneer_balls"
+        name="paneer_snack"
+        value="Paneer Balls"
+      />
+      <label for="paneer_balls">Paneer Balls</label><br />
+
+      <input
+        type="radio"
+        id="paneer_salic"
+        name="paneer_snack"
+        value="Paneer Salic"
+      />
+      <label for="paneer_salic">Paneer Salic</label><br />
+
+      <input
+        type="radio"
+        id="paneer_wanton"
+        name="paneer_snack"
+        value="Paneer Wanton"
+      />
+      <label for="paneer_wanton">Paneer Wanton</label><br />
+
+      <input
+        type="radio"
+        id="veg_pakoda"
+        name="paneer_snack"
+        value="Veg. Pakoda"
+      />
+      <label for="veg_pakoda">Veg. Pakoda</label><br />
+
+      <h3>3. Mushroom-based Snacks:</h3>
+      <input
+        type="radio"
+        id="mushroom_chilli"
+        name="mushroom_snack"
+        value="Mushroom Chilli"
+      />
+      <label for="mushroom_chilli">Mushroom Chilli</label><br />
+
+      <input
+        type="radio"
+        id="mushroom_sandwich"
+        name="mushroom_snack"
+        value="Mushroom Sandwich"
+      />
+      <label for="mushroom_sandwich">Mushroom Sandwich</label><br />
+
+      <input
+        type="radio"
+        id="mushroom_tempura"
+        name="mushroom_snack"
+        value="Mushroom Tempura"
+      />
+      <label for="mushroom_tempura">Mushroom Tempura</label><br />
+
+      <input
+        type="radio"
+        id="mushroom_sticks"
+        name="mushroom_snack"
+        value="Mushroom Sticks"
+      />
+      <label for="mushroom_sticks">Mushroom Sticks</label><br />
+
+      <input
+        type="radio"
+        id="mushroom_choila"
+        name="mushroom_snack"
+        value="Mushroom Choila"
+      />
+      <label for="mushroom_choila">Mushroom Choila</label><br />
+
+      <h3>4. Cheese-based Snacks:</h3>
+      <input
+        type="radio"
+        id="cheese_balls"
+        name="cheese_snack"
+        value="Cheese Balls"
+      />
+      <label for="cheese_balls">Cheese Balls</label><br />
+
+      <input
+        type="radio"
+        id="pineapple_cheese_sticks"
+        name="cheese_snack"
+        value="Pineapple Cheese Sticks"
+      />
+      <label for="pineapple_cheese_sticks">Pineapple Cheese Sticks</label><br />
+
+      <input
+        type="radio"
+        id="cheese_pakoda"
+        name="cheese_snack"
+        value="Cheese Pakoda"
+      />
+      <label for="cheese_pakoda">Cheese Pakoda</label><br />
+
+      <input
+        type="radio"
+        id="egg_pakoda"
+        name="cheese_snack"
+        value="Egg Pakoda"
+      />
+      <label for="egg_pakoda">Egg Pakoda</label><br />
+
+      <input
+        type="radio"
+        id="cheese_rolls"
+        name="cheese_snack"
+        value="Cheese Rolls"
+      />
+      <label for="cheese_rolls">Cheese Rolls</label><br />
+
+      <input
+        type="radio"
+        id="fish_manolian"
+        name="cheese_snack"
+        value="Fish Manolian"
+      />
+      <label for="fish_manolian">Fish Manolian</label><br />
+
+      <h3>5. Chicken with Extra items</h3>
+      <input
+        type="radio"
+        id="chicken_chilly"
+        name="chicken_snack"
+        value="Chicken Chilly"
+      />
+      <label for="chicken_chilly">Chicken Chilly</label><br />
+
+      <input
+        type="radio"
+        id="chicken_fried"
+        name="chicken_snack"
+        value="Chicken Fried (KFC Style)"
+      />
+      <label for="chicken_fried">Chicken Fried (KFC Style)</label><br />
+
+      <input
+        type="radio"
+        id="chicken_fingers"
+        name="chicken_snack"
+        value="Chicken Fingers"
+      />
+      <label for="chicken_fingers">Chicken Fingers</label><br />
+
+      <input
+        type="radio"
+        id="chicken_spring_rolls"
+        name="chicken_snack"
+        value="Chicken Spring Rolls"
+      />
+      <label for="chicken_spring_rolls">Chicken Spring Rolls</label><br />
+
+      <input
+        type="radio"
+        id="chicken_wantons"
+        name="chicken_snack"
+        value="Chicken Wantons"
+      />
+      <label for="chicken_wantons">Chicken Wantons</label><br />
+
+      <input
+        type="radio"
+        id="chicken_sausage"
+        name="chicken_snack"
+        value="Chicken Sausage (Grilled or Fried)"
+      />
+      <label for="chicken_sausage">Chicken Sausage (Grilled or Fried)</label
+      ><br />
+
+      <h3>6. Fish with Extra Cost</h3>
+      <input
+        type="radio"
+        id="fish_chilli"
+        name="fish_snack"
+        value="Fish Chilli"
+      />
+      <label for="fish_chilli">Fish Chilli</label><br />
+
+      <input
+        type="radio"
+        id="fish_sandwich"
+        name="fish_snack"
+        value="Fish Sandwich"
+      />
+      <label for="fish_sandwich">Fish Sandwich</label><br />
+
+      <input
+        type="radio"
+        id="single_fish_fry"
+        name="fish_snack"
+        value="Single Fish Fry"
+      />
+      <label for="single_fish_fry">Single Fish Fry</label><br />
+
+      <input
+        type="radio"
+        id="fish_tempura"
+        name="fish_snack"
+        value="Fish Tempura"
+      />
+      <label for="fish_tempura">Fish Tempura</label><br />
+
+      <input
+        type="radio"
+        id="fish_sticks"
+        name="fish_snack"
+        value="Fish Sticks"
+      />
+      <label for="fish_sticks">Fish Sticks</label><br />
+
+      <input
+        type="radio"
+        id="fish_chips"
+        name="fish_snack"
+        value="Fish Chips"
+      />
+      <label for="fish_chips">Fish Chips</label><br />
+
+      <h2>Main Course (One item from each list)</h2>
+
+      <h3>1. Rice:</h3>
+      <input type="radio" id="steamed_rice" name="rice" value="Steamed Rice" />
+      <label for="steamed_rice">Steamed Rice</label><br />
+
+      <input type="radio" id="jeera_rice" name="rice" value="Jeera Rice" />
+      <label for="jeera_rice">Jeera Rice</label><br />
+
+      <input type="radio" id="butter_rice" name="rice" value="Butter Rice" />
+      <label for="butter_rice">Butter Rice</label><br />
+
+      <input type="radio" id="peas_pulao" name="rice" value="Peas Pulao" />
+      <label for="peas_pulao">Peas Pulao</label><br />
+
+      <input type="radio" id="veg_pulao" name="rice" value="Veg. Pulao" />
+      <label for="veg_pulao">Veg. Pulao</label><br />
+
+      <h3>2. Dal:</h3>
+      <input type="radio" id="dal_tadka" name="dal" value="Dal Tadka" />
+      <label for="dal_tadka">Dal Tadka</label><br />
+
+      <input type="radio" id="dal_makhani" name="dal" value="Dal Makhani" />
+      <label for="dal_makhani">Dal Makhani</label><br />
+
+      <input type="radio" id="dal_fry" name="dal" value="Dal Fry" />
+      <label for="dal_fry">Dal Fry</label><br />
+
+      <input type="radio" id="moong_dal" name="dal" value="Moong Dal" />
+      <label for="moong_dal">Moong Dal</label><br />
+
+      <input type="radio" id="chana_dal" name="dal" value="Chana Dal" />
+      <label for="chana_dal">Chana Dal</label><br />
+
+      <h3>3. Vegetables:</h3>
+      <input type="radio" id="aloo_gobhi" name="vegetable" value="Aloo Gobhi" />
+      <label for="aloo_gobhi">Aloo Gobhi</label><br />
+
+      <input type="radio" id="aloo_methi" name="vegetable" value="Aloo Methi" />
+      <label for="aloo_methi">Aloo Methi</label><br />
+
+      <input type="radio" id="mixed_veg" name="vegetable" value="Mixed Veg" />
+      <label for="mixed_veg">Mixed Veg</label><br />
+
+      <input
+        type="radio"
+        id="methi_thepla"
+        name="vegetable"
+        value="Methi Thepla"
+      />
+      <label for="methi_thepla">Methi Thepla</label><br />
+
+      <input type="radio" id="veg_curry" name="vegetable" value="Veg. Curry" />
+      <label for="veg_curry">Veg. Curry</label><br />
+
+      <h3>4. Chicken:</h3>
+      <input
+        type="radio"
+        id="chicken_curry"
+        name="chicken"
+        value="Chicken Curry"
+      />
+      <label for="chicken_curry">Chicken Curry</label><br />
+
+      <input type="radio" id="chicken_fry" name="chicken" value="Chicken Fry" />
+      <label for="chicken_fry">Chicken Fry</label><br />
+
+      <input
+        type="radio"
+        id="butter_chicken"
+        name="chicken"
+        value="Butter Chicken"
+      />
+      <label for="butter_chicken">Butter Chicken</label><br />
+
+      <input
+        type="radio"
+        id="chicken_tikka"
+        name="chicken"
+        value="Chicken Tikka"
+      />
+      <label for="chicken_tikka">Chicken Tikka</label><br />
+
+      <input
+        type="radio"
+        id="chicken_korma"
+        name="chicken"
+        value="Chicken Korma"
+      />
+      <label for="chicken_korma">Chicken Korma</label><br />
+
+      <h3>5. Fish:</h3>
+      <input type="radio" id="fish_curry" name="fish" value="Fish Curry" />
+      <label for="fish_curry">Fish Curry</label><br />
+
+      <input type="radio" id="fish_fry" name="fish" value="Fish Fry" />
+      <label for="fish_fry">Fish Fry</label><br />
+
+      <input type="radio" id="fish_korma" name="fish" value="Fish Korma" />
+      <label for="fish_korma">Fish Korma</label><br />
+
+      <input type="radio" id="grilled_fish" name="fish" value="Grilled Fish" />
+      <label for="grilled_fish">Grilled Fish</label><br />
+
+      <input
+        type="radio"
+        id="fish_curry_fry"
+        name="fish"
+        value="Fish Curry Fry"
+      />
+      <label for="fish_curry_fry">Fish Curry Fry</label><br />
+
+      <h3>6. Roti/Paratha:</h3>
+      <input
+        type="radio"
+        id="tandoori_roti"
+        name="roti"
+        value="Tandoori Roti"
+      />
+      <label for="tandoori_roti">Tandoori Roti</label><br />
+
+      <input
+        type="radio"
+        id="plain_paratha"
+        name="roti"
+        value="Plain Paratha"
+      />
+      <label for="plain_paratha">Plain Paratha</label><br />
+
+      <input type="radio" id="butter_roti" name="roti" value="Butter Roti" />
+      <label for="butter_roti">Butter Roti</label><br />
+
+      <input type="radio" id="garlic_roti" name="roti" value="Garlic Roti" />
+      <label for="garlic_roti">Garlic Roti</label><br />
+
+      <input type="radio" id="aloo_paratha" name="roti" value="Aloo Paratha" />
+      <label for="aloo_paratha">Aloo Paratha</label><br />
+      <h3>7. Soup (Choose One):</h3>
+      <input type="radio" id="veg_soup" name="soup" value="Veg. Soup" />
+      <label for="veg_soup">Veg. Soup</label><br />
+
+      <input
+        type="radio"
+        id="mushroom_soup"
+        name="soup"
+        value="Mushroom Soup"
+      />
+      <label for="mushroom_soup">Mushroom Soup</label><br />
+
+      <input
+        type="radio"
+        id="hot_sour_veg_soup"
+        name="soup"
+        value="Hot & Sour (Veg.) Soup"
+      />
+      <label for="hot_sour_veg_soup">Hot & Sour (Veg.) Soup</label><br />
+
+      <input
+        type="radio"
+        id="hot_sour_chicken_soup"
+        name="soup"
+        value="Hot & Sour (Chicken) Soup"
+      />
+      <label for="hot_sour_chicken_soup">Hot & Sour (Chicken) Soup</label><br />
+
+      <input
+        type="radio"
+        id="sweet_corn_soup"
+        name="soup"
+        value="Sweet Corn Soup"
+      />
+      <label for="sweet_corn_soup">Sweet Corn Soup</label><br />
+
+      <input type="radio" id="chicken_soup" name="soup" value="Chicken Soup" />
+      <label for="chicken_soup">Chicken Soup</label><br />
+
+      <h3>Dessert (Choose Three Items):</h3>
+      <input
+        type="checkbox"
+        id="gajar_ko_halwa"
+        name="dessert"
+        value="Gajar Ko Halwa"
+      />
+      <label for="gajar_ko_halwa">Gajar Ko Halwa (Seasonal)</label><br />
+
+      <input
+        type="checkbox"
+        id="fruit_salad"
+        name="dessert"
+        value="Fruit Salad"
+      />
+      <label for="fruit_salad">Fruit Salad</label><br />
+
+      <input
+        type="checkbox"
+        id="suji_ko_halwa"
+        name="dessert"
+        value="Suji Ko Halwa"
+      />
+      <label for="suji_ko_halwa">Suji Ko Halwa</label><br />
+
+      <input
+        type="checkbox"
+        id="rasin_salad"
+        name="dessert"
+        value="Rasin Salad"
+      />
+      <label for="rasin_salad">Rasin Salad</label><br />
+
+      <input type="checkbox" id="ice_cream" name="dessert" value="Ice Cream" />
+      <label for="ice_cream">Ice Cream</label><br />
+
+      <input type="checkbox" id="lal_mohan" name="dessert" value="Lal Mohan" />
+      <label for="lal_mohan">Lal Mohan</label><br />
+
+      <input type="checkbox" id="rasbari" name="dessert" value="Rasbari" />
+      <label for="rasbari">Rasbari</label><br />
+
+      <input type="checkbox" id="curd" name="dessert" value="Curd" />
+      <label for="curd">Curd</label><br />
+
+      <h3>Dessert Items with Extra Cost:</h3>
+      <input
+        type="checkbox"
+        id="swiss_rolls"
+        name="dessert_extra"
+        value="Swiss Rolls"
+      />
+      <label for="swiss_rolls">Swiss Rolls</label><br />
+
+      <input
+        type="checkbox"
+        id="black_forest_cake"
+        name="dessert_extra"
+        value="Black Forest Cake"
+      />
+      <label for="black_forest_cake">Black Forest Cake</label><br />
+
+      <input
+        type="checkbox"
+        id="cheese_cake"
+        name="dessert_extra"
+        value="Cheese Cake"
+      />
+      <label for="cheese_cake">Cheese Cake</label><br />
+    </form>
+  </body>
+</html>

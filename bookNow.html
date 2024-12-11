@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Book Now - Manashvi Banquet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="#" class="logo"
+        ><img src="favicon.png" alt="Logo" /> Manashvi Banquet</a
+      >
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="package.html">Package</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#review">Review</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Menu Section -->
+    <div class="container">
+      <h1 class="heading" id="eventHeading">Book Your Event</h1>
+    
+     <!-- Menu List Section -->
+<div class="menu-list">
+  <h2>See Full Menu of Below Package</h2>
+  <ul>
+    <li><a href="customizedPack.html">Customized Package</a></li>
+    <li><a href="VegPack.html">Veg Package</a></li>
+    <li><a href="GoldPack.html">Gold Package</a></li>
+    <li><a href="DiamondPack.html">Diamond Package</a></li>
+  </ul>
+</div>
+
+    <!-- Book Now Section -->
+    <section class="book-now">
+      <div class="container">
+        <h1 class="heading" id="eventHeading">Book Your Event</h1>
+        <form
+          action="https://formsubmit.co/bishaldahal4777@gmail.com"
+          method="post"
+          class="booking-form"
+        >
+          <div class="form-group">
+            <label for="name">Full Name<span style="color: red">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone"
+              >Phone Number<span style="color: red">*</span></label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="event-type"
+              >Event Type<span style="color: red">*</span></label
+            >
+            <select id="event-type" name="event-type" required>
+              <option value="">-- Select Event Type --</option>
+              <option value="wedding">Wedding</option>
+              <option value="birthday">Birthday</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="corporate">Anniversary</option>
+              <option value="corporate">Baby Shower</option>
+              <option value="corporate">Reception</option>
+              <option value="corporate">Engagement</option>
+
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date"
+              >Event Date<span style="color: red">*</span></label
+            >
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              placeholder="Enter number of guests"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="package1">Select Package</label>
+            <select
+              id="package1"
+              name="package1"
+              onchange="toggleSecondDropdown()"
+            >
+              <option value="">-- Select Package --</option>
+              <option value="customized">Customized Package</option>
+              <option value="veg">Veg Pack</option>
+              <option value="non-veg">Gold Pack</option>
+              <option value="non-veg">Diamond Pack</option>
+
+            </select>
+          </div>
+
+          <!-- beverages Package -->
+
+          <label for="beverage">Do you want beverages?</label>
+          <div>
+            <input type="checkbox" id="beverage" name="beverage" value="yes" />
+            <label for="beverage">Yes</label>
+
+            <input type="checkbox" id="beverage" name="beverage" value="No" />
+            <label for="beverage">No</label>
+          </div>
+
+          <button type="submit" class="btn">Book Now</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 Manashvi Banquet. All rights reserved.</p>
+    </footer>
+
+  <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+.header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: #333;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Menu Section */
+.menu-list {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.menu-list h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+.menu-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-list li {
+  background-color: #f4f4f4;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #555;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-list li:hover {
+  background-color: #ffcc00;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.menu-list li a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.menu-list li a:hover {
+  color: #fff;
+}
+
+/* Book Now Section */
+.book-now {
+  padding: 50px 20px;
+  background: #f4f4f4;
+}
+
+.book-now .heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Custom Menu Styles */
+#menuForm {
+  margin-top: 15px;
+}
+
+#menuForm select {
+  height: auto;
+  min-height: 120px;
+}
+
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 12px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+  </style>
+
+    <script src="bookNow.js"></script>
+  </body>
+</html>
+<!-- <div class="form-group" id="menuForm" style="display: none"> -->

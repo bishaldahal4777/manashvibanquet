@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      /* Header Styles */
+      .header {
+        background: #f5f5f5;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .header .logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .header .logo img {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .navbar a {
+        color: #003366; /* Blue color */
+        text-decoration: none; /* Removes underline */
+        font-weight: bold;
+      }
+
+      .navbar a:hover {
+        color: #ff6347; /* Color when hovered */
+      }
+
+      .navbar a:focus {
+        outline: none;
+      }
+
+      /* Menu */
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .menu-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .main-box {
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .extra-box {
+        background-color: #f0f8ff; /* Light blue for distinction */
+        border-color: #87ceeb;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #444;
+      }
+
+      /* Category container for gallery layout */
+      .category-container {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(250px, 1fr)
+        ); /* Adjusts grid columns */
+        gap: 20px; /* Ensures equal space between items */
+        padding: 20px;
+      }
+
+      /* Category box to resemble gallery items */
+      .category-box {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .category-box:hover {
+        transform: scale(1.05); /* Hover effect to enlarge the box */
+      }
+
+      .category-box h3 {
+        text-align: center;
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .category-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .category-box ul li {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+      }
+
+      /* Add distinct styles for Extra Charge items */
+      .extra-box .category-box {
+        background-color: #e8f4fc; /* Light blue shade */
+        border-color: #87ceeb;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .category-box {
+          flex: 1 1 calc(33.33% - 20px); /* 3 boxes per row */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .category-box {
+          flex: 1 1 calc(50% - 20px); /* 2 boxes per row */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .category-box {
+          flex: 1 1 100%; /* 1 box per row */
+        }
+      }
+
+      /* Categories Section */
+      .categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        gap: 10px;
+      }
+
+      .categories button {
+        background: none;
+        border: 2px solid #ccc;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.3s;
+        white-space: nowrap;
+      }
+
+      .categories button.active {
+        border-color: #ff6347;
+        color: #ff6347;
+      }
+
+      .categories button:hover {
+        background-color: #ff6347;
+        color: white;
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="favicon.png" alt="Logo" /> Manashvi Banquet
+      </a>
+      <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="package.html">Package</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="bookNow.html">Book Now</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <div class="menu-container">
+      <h1>Customized Menu</h1>
+
+      <!-- Package Includes Section -->
+      <div class="main-box">
+        <h2>Package Includes</h2>
+        <div class="category-container">
+          <div class="category-box">
+            <h3>Roti</h3>
+            <ul>
+              <li>Butter Naan</li>
+              <li>Plain Roti</li>
+              <li>Butter Roti</li>
+              <li>Tandoori Naan</li>
+              <li>Tava Roti</li>
+            </ul>
+          </div>
+          <div class="category-box">
+            <h3>Rice</h3>
+            <ul>
+              <li>Pulao</li>
+              <li>Jeera Rice</li>
+              <li>Kashmiri Pulao</li>
+              <li>Plain Rice</li>
+              <li>Vegetable Biryani</li>
+              <li>Chicken Biryani</li>
+            </ul>
+          </div>
+          <div class="category-box">
+            <h3>Veg</h3>
+            <ul>
+              <li>Mix Veg</li>
+              <li>Butter Paneer Masala</li>
+              <li>Rajma Paneer</li>
+              <li>Matar Mushroom Curry</li>
+              <li>Saag</li>
+              <li>Potato Lady Finger</li>
+            </ul>
+          </div>
+          <div class="category-box">
+            <h3>Achar</h3>
+            <ul>
+              <li>Tomato Achar</li>
+              <li>Khatti Mithi Achar</li>
+              <li>Mula Kerau Achar</li>
+              <li>Green Salad</li>
+              <li>Gundruk Sadeko</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extra Charge Items Section -->
+      <div class="main-box extra-box">
+        <h2>Extra Charge Items</h2>
+        <div class="category-container">
+          <div class="category-box">
+            <h3>Non-Veg</h3>
+            <ul>
+              <li>Chicken Curry</li>
+              <li>Mutton Curry</li>
+              <li>Fish Fry</li>
+              <li>Egg Curry</li>
+            </ul>
+          </div>
+          <div class="category-box">
+            <h3>Desserts</h3>
+            <ul>
+              <li>Gulab Jamun</li>
+              <li>Rasgulla</li>
+              <li>Ice Cream</li>
+              <li>Kheer</li>
+            </ul>
+          </div>
+          <div class="category-box">
+            <h3>Beverages</h3>
+            <ul>
+              <li>Tea</li>
+              <li>Coffee</li>
+              <li>Soft Drinks</li>
+              <li>Lassi</li>
+            </ul>
+          </div>
+          <div class="category-box">
+            <h3>Snacks</h3>
+            <ul>
+              <li>Samosa</li>
+              <li>Pakora</li>
+              <li>Chana Chaat</li>
+              <li>Spring Roll</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Manashvi Banquet All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

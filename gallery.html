@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="favicon.png" alt="Logo" /> Manashvi Banquet
+      </a>
+      <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="package.html">Package</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="bookNow.html">Book Now</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="gallery-header">
+      <h1>Event Photo Gallery</h1>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="categories">
+      <button onclick="showCategory('all')" class="active">All Photos</button>
+      <button onclick="showCategory('decoration')">Decoration</button>
+      <button onclick="showCategory('venue')">
+        Photography and Videography
+      </button>
+      <button onclick="showCategory('kids')">Kids Playground</button>
+      <button onclick="showCategory('dining')">Food Court</button>
+      <!-- <button onclick="showCategory('snacks')">Snacks</button>
+      <button onclick="showCategory('beverages')">Beverages</button>
+      <button onclick="showCategory('desserts')">Desserts</button>
+      <button onclick="showCategory('veg')">Veg</button>
+      <button onclick="showCategory('nonveg')">Non-Veg</button> -->
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery" id="gallery">
+      <!-- Images will be dynamically loaded here -->
+    </div>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img id="lightbox-img" src="" alt="Large View" />
+      <button class="prev" onclick="showPreviousImage()">&#10094;</button>
+      <button class="next" onclick="showNextImage()">&#10095;</button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Manashvi Banquet All Rights Reserved.</p>
+    </footer>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      /* Header Styles */
+      .header {
+        background: #f5f5f5;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .header .logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .header .logo img {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .navbar a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .navbar a:hover {
+        color: #ff6347;
+      }
+
+      /* Gallery Header */
+      .gallery-header {
+        text-align: center;
+        margin: 40px 0;
+        padding-top: 70px;
+      }
+
+      .gallery-header h1 {
+        font-size: 36px;
+        color: #333;
+      }
+
+      /* Categories Section */
+      .categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        gap: 10px;
+      }
+
+      .categories button {
+        background: none;
+        border: 2px solid #ccc;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.3s;
+        white-space: nowrap;
+      }
+
+      .categories button.active {
+        border-color: #ff6347;
+        color: #ff6347;
+      }
+
+      .categories button:hover {
+        background-color: #ff6347;
+        color: white;
+      }
+
+      /* Gallery Section */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 0 20px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+      }
+      /* Lightbox Navigation Buttons */
+      .lightbox .prev,
+      .lightbox .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        z-index: 1001;
+      }
+
+      .lightbox .prev {
+        left: 10px;
+      }
+
+      .lightbox .next {
+        right: 10px;
+      }
+
+      .lightbox .prev:hover,
+      .lightbox .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .navbar {
+          width: 100%;
+          flex-direction: column;
+          gap: 10px;
+          align-items: flex-start;
+        }
+
+        .categories button {
+          padding: 8px 10px;
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-header h1 {
+          font-size: 24px;
+        }
+
+        .categories {
+          flex-direction: column;
+        }
+      }
+      /* Responsive Menu Styles */
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #333;
+      }
+
+      .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      /* Lightbox Styles */
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .lightbox img {
+        display: block;
+        max-width: 80%;
+        max-height: 80%;
+        margin: 50px auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+      }
+
+      .lightbox .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .lightbox .close:hover,
+      .lightbox .close:focus {
+        color: #ff6347;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .navbar {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: #f5f5f5;
+          padding: 10px;
+          position: absolute;
+          top: 60px; /* Adjust based on header height */
+          left: 0;
+          z-index: 1000;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar.active {
+          display: flex;
+        }
+
+        .navbar a {
+          padding: 10px 15px;
+          border-bottom: 1px solid #ccc;
+        }
+
+        .navbar a:last-child {
+          border-bottom: none;
+        }
+      }
+    </style>
+    <script>
+      const categories = {
+        all: [
+          "deco10.jpeg",
+          "deco12.jpeg",
+          "deco13.jpeg",
+          "deco14.jpeg",
+          "deco15.jpeg",
+          "deco17.jpeg",
+          "deco19.jpeg",
+          "deco20.jpeg",
+          "deco1.jpeg",
+          "deco3.jpeg",
+          "deco5.jpeg",
+          "deco6.jpeg",
+          "deco8.jpeg",
+          "din.jpeg",
+          "din2.jpeg",
+          "din3.jpeg",
+          "din4.jpeg",
+          "din5.jpeg",
+          "din6.jpeg",
+          "din7.jpeg",
+          "din8.jpeg",
+          "din9.jpeg",
+          "deco21.jpeg",
+          "deco22.jpeg",
+          "deco23.jpeg",
+          "deco26.jpeg",
+          "deco27.jpeg",
+          "deco30.jpeg",
+          "deco31.jpeg",
+          "deco32.jpeg",
+          "deco33.jpeg",
+          "deco34.jpeg",
+          "deco2.jpeg",
+          "deco4.jpeg",
+          "deco7.jpeg",
+          "deco9.jpeg",
+          "pv1.jpg",
+          "pv2.jpg",
+          "pv3.jpg",
+          "pv4.jpg",
+          "pv5.jpg",
+          "pv6.jpg",
+          "pv7.jpg",
+          "pv8.jpg",
+          "pv9.jpg",
+          "pv10.jpg",
+          "pv11.jpg",
+          "pv12.jpg",
+          "pv13.jpg",
+          "pv14.jpg",
+          "pv15.jpg",
+          "pv16.jpg",
+          "pv17.jpg",
+          "din10.jpeg",
+          "din11.jpeg",
+          "din12.jpeg",
+          "din13.jpeg",
+          "pv18.jpg",
+          "pv19.jpg",
+          "pv20.jpg",
+          "deco16.jpeg",
+          "deco18.jpeg",
+          "deco24.jpeg",
+          "kids1.jpeg",
+          "kids2.jpeg",
+          "kids3.jpeg",
+          "kids4.jpeg",
+        ],
+        decoration: [
+          "deco1.jpeg",
+          "deco3.jpeg",
+          "deco5.jpeg",
+          "deco6.jpeg",
+          "deco8.jpeg",
+          "deco10.jpeg",
+          "deco12.jpeg",
+          "deco13.jpeg",
+          "deco1.jpeg",
+          "deco17.jpeg",
+          "deco19.jpeg",
+          "deco20.jpeg",
+          "deco21.jpeg",
+          "deco22.jpeg",
+          "deco23.jpeg",
+          "deco26.jpeg",
+          "deco27.jpeg",
+          "deco3.jpeg",
+          "deco14.jpeg",
+          "deco15.jpeg",
+          "deco30.jpeg",
+          "deco31.jpeg",
+          "deco32.jpeg",
+          "deco33.jpeg",
+          "deco34.jpeg",
+          "deco2.jpeg",
+          "deco4.jpeg",
+          "deco7.jpeg",
+          "deco9.jpeg",
+          "deco16.jpeg",
+          "deco18.jpeg",
+          "deco24.jpeg",
+        ],
+        venue: [
+          "pv2.jpg",
+          "pv8.jpg",
+          "pv9.jpg",
+          "pv17.jpg",
+          "pv7.jpg",
+
+          "pv10.jpg",
+          "pv11.jpg",
+          "pv1.jpg",
+          "pv3.jpg",
+          "pv5.jpg",
+          "pv6.jpg",
+          "pv4.jpg",
+
+          "pv12.jpg",
+          "pv13.jpg",
+          "pv14.jpg",
+          "pv15.jpg",
+          "pv16.jpg",
+
+          "pv18.jpg",
+          "pv19.jpg",
+          "pv20.jpg",
+        ],
+        kids: ["kids1.jpeg", "kids2.jpeg", "kids3.jpeg", "kids4.jpeg"],
+        dining: [
+          "din.jpeg",
+          "din2.jpeg",
+          "din3.jpeg",
+          "din4.jpeg",
+          "din5.jpeg",
+          "din6.jpeg",
+          "din7.jpeg",
+          "din8.jpeg",
+          "din9.jpeg",
+          "din10.jpeg",
+          "din11.jpeg",
+          "din12.jpeg",
+          "din13.jpeg",
+        ],
+        snacks: ["snacks1.jpg", "snacks2.jpg", "snacks3.jpg"],
+        beverages: ["beverages1.jpg", "beverages2.jpg"],
+        desserts: ["dess1.jpeg", "dess2.jpeg", "dess3.jpeg"],
+        veg: ["veg1.jpg", "veg2.jpg"],
+        nonveg: ["nonveg1.jpg", "nonveg2.jpg"],
+      };
+
+      let currentImageIndex = 0; // Track the current image index
+      let currentCategory = "all"; // Track the current category
+
+      function showCategory(category) {
+        const gallery = document.getElementById("gallery");
+        gallery.innerHTML = ""; // Clear current images
+
+        const images = categories[category] || [];
+        currentCategory = category; // Update current category
+
+        images.forEach((src, index) => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = category + " Image";
+          img.onclick = () => openLightbox(index);
+          gallery.appendChild(img);
+        });
+
+        // Update active category
+        const buttons = document.querySelectorAll(".categories button");
+        buttons.forEach((button) => button.classList.remove("active"));
+        document
+          .querySelector(`button[onclick="showCategory('${category}')"]`)
+          .classList.add("active");
+      }
+      function openLightbox(index) {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const images = categories[currentCategory];
+
+        currentImageIndex = index; // Set the current image index
+        lightbox.style.display = "block"; // Show the lightbox
+        lightboxImg.src = images[currentImageIndex]; // Display the clicked image
+
+        // Ensure the buttons are visible and functional
+        document.querySelector(".next").onclick = showNextImage;
+        document.querySelector(".prev").onclick = showPreviousImage;
+      }
+      function closeLightbox() {
+        const lightbox = document.getElementById("lightbox");
+        lightbox.style.display = "none";
+      }
+      function showNextImage() {
+        const images = categories[currentCategory];
+        currentImageIndex = (currentImageIndex + 1) % images.length; // Loop to the first image
+        document.getElementById("lightbox-img").src = images[currentImageIndex];
+      }
+
+      function showPreviousImage() {
+        const images = categories[currentCategory];
+        currentImageIndex =
+          (currentImageIndex - 1 + images.length) % images.length; // Loop to the last image
+        document.getElementById("lightbox-img").src = images[currentImageIndex];
+      }
+
+      // Initialize with 'all' category
+      showCategory("all");
+
+      const menuToggle = document.getElementById("menu-toggle");
+      const navbar = document.getElementById("navbar");
+
+      menuToggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

@@ -3,579 +3,2242 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diamond Veg Pack</title>
+    <title>Gold Pack Menu - Manashvi Banquet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="favicon.png" alt="Logo" /> Manashvi Banquet
+      </a>
+      <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="package.html">Package</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle"></button>
+      <!-- <i class="fas fa-bars"></i> -->
+      <!-- Hamburger icon -->
+    </header>
+
+    <!-- Main Content Section -->
+    <form
+      action="https://formsubmit.co/bishaldahal4777@gmail.com"
+      method="post"
+      class="booking-form"
+    >
+      <div class="gallery-header">
+        <h1>Gold Non Veg Menu Pack</h1>
+        <!-- Snacks Includes Section -->
+        <div class="main-box">
+          <h2>Snacks</h2>
+          <div class="category-container">
+            <div class="category-box">
+              <h3>Potato (1 item)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="potato"
+                    value="Cajun Potato"
+                    onclick="validateSelection('potato', 1)"
+                  />
+                  Cajun Potato
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="potato"
+                    value="French Fry"
+                    onclick="validateSelection('potato', 1)"
+                  />
+                  French Fry
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="potato"
+                    value="Aalu Chop"
+                    onclick="validateSelection('potato', 1)"
+                  />
+                  Aalu Chop
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="potato"
+                    value="Aalu Tikka"
+                    onclick="validateSelection('potato', 1)"
+                  />
+                  Aalu Tikka
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="potato"
+                    value="Peanuts Potato"
+                    onclick="validateSelection('potato', 1)"
+                  />
+                  Peanuts Potato
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="potato"
+                    value="Mustang Aalu"
+                    onclick="validateSelection('potato', 1)"
+                  />
+                  Mustang Aalu
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="potato"
+                    value="Aalu Sadeko"
+                    onclick="validateSelection('potato', 1)"
+                  />
+                  Aalu Sadeko
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="potato"
+                    value="Potato Chips (Wafers)"
+                    onclick="validateSelection('potato', 1)"
+                  />
+                  Potato Chips (Wafers)
+                </li>
+              </ul>
+            </div>
+
+            <div class="category-box">
+              <h3>Cheese (1 items)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="cheese"
+                    value="Cheese Ball"
+                    onclick="validateSelection('cheese', 1)"
+                  />
+                  Cheese Ball
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="cheese"
+                    value="Pineapple Cheese"
+                    onclick="validateSelection('cheese', 1)"
+                  />
+                  Pineapple Cheese
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="cheese"
+                    value="Cheese Sticks"
+                    onclick="validateSelection('cheese', 1)"
+                  />
+                  Cheese Sticks
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="cheese"
+                    value="Cheese Pokoda"
+                    onclick="validateSelection('cheese', 1)"
+                  />
+                  Cheese Pokoda
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="cheese"
+                    value="Cheese Rolls"
+                    onclick="validateSelection('cheese', 1)"
+                  />
+                  Cheese Rolls
+                </li>
+              </ul>
+            </div>
+
+            <div class="category-box">
+              <h3>Paneer (1 items)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="paneer"
+                    value="Paneer Ball"
+                    onclick="validateSelection('paneer', 1)"
+                  />
+                  Paneer Ball
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="paneer"
+                    value="Paneer Chilly"
+                    onclick="validateSelection('paneer', 1)"
+                  />
+                  Paneer Chilly
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="paneer"
+                    value="Paneer Pakoda"
+                    onclick="validateSelection('paneer', 1)"
+                  />
+                  Paneer Pakoda
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="paneer"
+                    value="Paneer Spring Rolls"
+                    onclick="validateSelection('paneer', 1)"
+                  />
+                  Paneer Spring Rolls
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="paneer"
+                    value="Paneer Tikka"
+                    onclick="validateSelection('paneer', 1)"
+                  />
+                  Paneer Tikka
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="paneer"
+                    value="Paneer Sadeko"
+                    onclick="validateSelection('paneer', 1)"
+                  />
+                  Paneer Sadeko
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="paneer"
+                    value="Tofu Chilly"
+                    onclick="validateSelection('paneer', 1)"
+                  />
+                  Tofu Chilly
+                </li>
+              </ul>
+            </div>
+
+            <div class="category-box">
+              <h3>Mushroom (1 items)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mushroom"
+                    value="Mushroom Chilly"
+                    onclick="validateSelection('mushroom', 1)"
+                  />
+                  Mushroom Chilly
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mushroom"
+                    value="Mushroom Chholia"
+                    onclick="validateSelection('mushroom', 1)"
+                  />
+                  Mushroom Chholia
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mushroom"
+                    value="Mushroom Pakoda"
+                    onclick="validateSelection('mushroom', 1)"
+                  />
+                  Mushroom Pakoda
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mushroom"
+                    value="Mushroom Sandeko"
+                    onclick="validateSelection('mushroom', 1)"
+                  />
+                  Mushroom Sandeko
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mushroom"
+                    value="Mushroom Tempura"
+                    onclick="validateSelection('mushroom', 1)"
+                  />
+                  Mushroom Tempura
+                </li>
+              </ul>
+            </div>
+
+            <div class="category-box">
+              <h3>Mix (3 items)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mix"
+                    value="Veg. Wanton"
+                    onclick="validateSelection('mix', 3)"
+                  />
+                  Veg. Wanton
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mix"
+                    value="Veg. Spring Rolls"
+                    onclick="validateSelection('mix', 3)"
+                  />
+                  Veg. Spring Rolls
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mix"
+                    value="Sweet Corn"
+                    onclick="validateSelection('mix', 3)"
+                  />
+                  Sweet Corn
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mix"
+                    value="Veg. Tempura"
+                    onclick="validateSelection('mix', 3)"
+                  />
+                  Veg. Tempura
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mix"
+                    value="Broccoli Tawa (Mix veg. Tawa)"
+                    onclick="validateSelection('mix', 3)"
+                  />
+                  Broccoli Tawa (Mix veg. Tawa)
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mix"
+                    value="Veg. Mo: Mo:"
+                    onclick="validateSelection('mix', 3)"
+                  />
+                  Veg. Mo: Mo:
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mix"
+                    value="Badam Sadeko"
+                    onclick="validateSelection('mix', 3)"
+                  />
+                  Badam Sadeko
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="mix"
+                    value="Veg. Pakoda"
+                    onclick="validateSelection('mix', 3)"
+                  />
+                  Veg. Pakoda
+                </li>
+              </ul>
+            </div>
+
+            <div class="category-box">
+              <h3>Veg (3 items)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg[]"
+                    value="Mix Veg"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Mix Veg
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg[]"
+                    value="Aalu Kauli"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Aalu Kauli
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg[]"
+                    value="Veg Manchurian"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Veg Manchurian
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg[]"
+                    value="Veg Kofta Curry"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Veg Kofta Curry
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg[]"
+                    value="Butter Paneer Masala"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Butter Paneer Masala
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg[]"
+                    value="Rajma Paneer"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Rajma Paneer
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg[]"
+                    value="Mutter Mushroom Curry"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Mutter Mushroom Curry
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg[]"
+                    value="Aalu Prawal"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Aalu Prawal
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg[]"
+                    value="Aalu Bodi"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Aalu Bodi
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg[]"
+                    value="Palak Paneer"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Palak Paneer
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Fish (Any 1 Item)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="fish"
+                    value="Fish Tempora"
+                    onclick="validateSelection('fish', 1)"
+                  />
+                  Fish Tempora
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="fish"
+                    value="Baby Fish Fry"
+                    onclick="validateSelection('fish', 1)"
+                  />
+                  Baby Fish Fry
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="fish"
+                    value="Fish Finger"
+                    onclick="validateSelection('fish', 1)"
+                  />
+                  Fish Finger
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Chicken (Any 1 Item)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chicken"
+                    value="Chicken Chilly"
+                    onclick="validateSelection('chicken', 1)"
+                  />
+                  Chicken Chilly
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chicken"
+                    value="Chicken Sausage"
+                    onclick="validateSelection('chicken', 1)"
+                  />
+                  Chicken Sausage
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chicken"
+                    value="Chicken Choila"
+                    onclick="validateSelection('chicken', 1)"
+                  />
+                  Chicken Choila
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chicken"
+                    value="Chicken Meat Ball"
+                    onclick="validateSelection('chicken', 1)"
+                  />
+                  Chicken Meat Ball
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chicken"
+                    value="Chicken Mo: Mo:"
+                    onclick="validateSelection('chicken', 1)"
+                  />
+                  Chicken Mo: Mo:
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chicken"
+                    value="Chicken Taas"
+                    onclick="validateSelection('chicken', 1)"
+                  />
+                  Chicken Taas
+                </li>
+              </ul>
+            </div>
+
+            <div class="category-box">
+              <h3>Soup (Any 1 item) Only Available in Winter Season</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="soup"
+                    value="Mix Veg. Soup"
+                    onclick="validateSelection('soup', 1)"
+                  />
+                  Mix Veg. Soup
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="soup"
+                    value="Mushroom Soup"
+                    onclick="validateSelection('soup', 1)"
+                  />
+                  Mushroom Soup
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="soup"
+                    value="Hot &amp; Sour Soup"
+                    onclick="validateSelection('soup', 1)"
+                  />
+                  Hot &amp; Sour Soup
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="soup"
+                    value="Sweet Corn Soup"
+                    onclick="validateSelection('soup', 1)"
+                  />
+                  Sweet Corn Soup
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Maincourse Includes Section -->
+        <div class="main-box">
+          <h2>Main Course</h2>
+          <div class="category-container">
+            <div class="category-box">
+              <h3>Roti (Any 1 item)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="roti"
+                    value="Vatura"
+                    onclick="validateSelection('roti', 1)"
+                  />
+                  Vatura
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="roti"
+                    value="Plain Naan"
+                    onclick="validateSelection('roti', 1)"
+                  />
+                  Plain Naan
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="roti"
+                    value="Butter Naan"
+                    onclick="validateSelection('roti', 1)"
+                  />
+                  Butter Naan
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="roti"
+                    value="Tawa Roti"
+                    onclick="validateSelection('roti', 1)"
+                  />
+                  Tawa Roti
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="roti"
+                    value="Rumali Roti"
+                    onclick="validateSelection('roti', 1)"
+                  />
+                  Rumali Roti
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Rice (Any 1 item)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="rice"
+                    value="Steamed Rice"
+                    onclick="validateSelection('rice', 1)"
+                  />
+                  Steamed Rice
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="rice"
+                    value="Jeera Rice"
+                    onclick="validateSelection('rice', 1)"
+                  />
+                  Jeera Rice
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="rice"
+                    value="Butter Rice"
+                    onclick="validateSelection('rice', 1)"
+                  />
+                  Butter Rice
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="rice"
+                    value="Peas Pulow"
+                    onclick="validateSelection('rice', 1)"
+                  />
+                  Peas Pulow
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="rice"
+                    value="Kashmiri Pulow"
+                    onclick="validateSelection('rice', 1)"
+                  />
+                  Kashmiri Pulow
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="rice"
+                    value="Veg. Pulow"
+                    onclick="validateSelection('rice', 1)"
+                  />
+                  Veg. Pulow
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="rice"
+                    value="Veg. Biryani"
+                    onclick="validateSelection('rice', 1)"
+                  />
+                  Veg. Biryani
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="rice"
+                    value="Plain Pulow"
+                    onclick="validateSelection('rice', 1)"
+                  />
+                  Plain Pulow
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="rice"
+                    value="Nuts Pulow"
+                    onclick="validateSelection('rice', 1)"
+                  />
+                  Nuts Pulow
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Daal (Any 1 item)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="daal"
+                    value="Dal Makhani"
+                    onclick="validateSelection('daal', 1)"
+                  />
+                  Dal Makhani
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="daal"
+                    value="Yellow Dal"
+                    onclick="validateSelection('daal', 1)"
+                  />
+                  Yellow Dal
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="daal"
+                    value="Rajma Dal"
+                    onclick="validateSelection('daal', 1)"
+                  />
+                  Rajma Dal
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="daal"
+                    value="Black Dal (Thakali Style)"
+                    onclick="validateSelection('daal', 1)"
+                  />
+                  Black Dal (Thakali Style)
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="daal"
+                    value="Dal Tadka"
+                    onclick="validateSelection('daal', 1)"
+                  />
+                  Dal Tadka
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="daal"
+                    value="Dal Fry"
+                    onclick="validateSelection('daal', 1)"
+                  />
+                  Dal Fry
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="daal"
+                    value="Mas ko Dal (Jimbu le jhaneko)"
+                    onclick="validateSelection('daal', 1)"
+                  />
+                  Mas ko Dal (Jimbu le jhaneko)
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Veg (Any 3 items)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Mix Veg."
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Mix Veg.
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Aalu Cauli"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Aalu Cauli
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Saag"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Saag
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Veg. Munchurian"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Veg. Munchurian
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Veg. Kofta Curry"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Veg. Kofta Curry
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Butter Paneer Masala"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Butter Paneer Masala
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Rajma Paneer"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Rajma Paneer
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Mutter Mushroom"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Mutter Mushroom
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Curry"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Curry
+                </li>
+                <h3>[ Seasonal ]</h3>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Aalu Parwal"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Aalu Parwal
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Aalu Bhandi Fry"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Aalu Bhandi Fry
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Katahar Aalu Curry"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Katahar Aalu Curry
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Katahar Aalu Fry"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Katahar Aalu Fry
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Palak Paneer"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Palak Paneer
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="veg"
+                    value="Aalu Bodi"
+                    onclick="validateSelection('veg', 3)"
+                  />
+                  Aalu Bodi
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Achaar (Any 3 items)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="achaar"
+                    value="Tomato Achar"
+                    onclick="validateSelection('achaar', 3)"
+                  />
+                  Tomato Achar
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="achaar"
+                    value="Khatti Mithi Achar"
+                    onclick="validateSelection('achaar', 3)"
+                  />
+                  Khatti Mithi Achar
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="achaar"
+                    value="Gundruk Sadeko"
+                    onclick="validateSelection('achaar', 3)"
+                  />
+                  Gundruk Sadeko
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="achaar"
+                    value="Methi Achar"
+                    onclick="validateSelection('achaar', 3)"
+                  />
+                  Methi Achar
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="achaar"
+                    value="Mix Achar"
+                    onclick="validateSelection('achaar', 3)"
+                  />
+                  Mix Achar
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="achaar"
+                    value="Mula Kerau Achar"
+                    onclick="validateSelection('achaar', 3)"
+                  />
+                  Mula Kerau Achar
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="achaar"
+                    value="Aalu Achar"
+                    onclick="validateSelection('achaar', 3)"
+                  />
+                  Aalu Achar
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Salad (Any 2 items)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="salad"
+                    value="Potato Salad"
+                    onclick="validateSelection('salad', 2)"
+                  />
+                  Potato Salad
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="salad"
+                    value="Broccoli Salad"
+                    onclick="validateSelection('salad', 2)"
+                  />
+                  Broccoli Salad
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="salad"
+                    value="Avocado Salad"
+                    onclick="validateSelection('salad', 2)"
+                  />
+                  Avocado Salad
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="salad"
+                    value="Corn Salad"
+                    onclick="validateSelection('salad', 2)"
+                  />
+                  Corn Salad
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="salad"
+                    value="Kachumber"
+                    onclick="validateSelection('salad', 2)"
+                  />
+                  Kachumber
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="salad"
+                    value="Sprouts Salad"
+                    onclick="validateSelection('salad', 2)"
+                  />
+                  Sprouts Salad
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="salad"
+                    value="Russian Salad"
+                    onclick="validateSelection('salad', 2)"
+                  />
+                  Russian Salad
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="salad"
+                    value="Green Salad"
+                    onclick="validateSelection('salad', 2)"
+                  />
+                  Green Salad
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="salad"
+                    value="Vegetable Salad"
+                    onclick="validateSelection('salad', 2)"
+                  />
+                  Vegetable Salad
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Papad (Any 1 item)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="papad"
+                    value="Fry Papad"
+                    onclick="validateSelection('papad', 1)"
+                  />
+                  Fry Papad
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="papad"
+                    value="Dry Papad"
+                    onclick="validateSelection('papad', 1)"
+                  />
+                  Dry Papad
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="papad"
+                    value="Masala Papad"
+                    onclick="validateSelection('papad', 1)"
+                  />
+                  Masala Papad
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="papad"
+                    value="Aloo Bhujia"
+                    onclick="validateSelection('papad', 1)"
+                  />
+                  Aloo Bhujia
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Dessert (Any 3 items)</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Gazar ko Haluwa"
+                    onclick="validateSelection('dessert', 3)"
+                  />
+                  Gazar ko Haluwa (Seasonal)
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Suji ko Haluwa"
+                    onclick="validateSelection('dessert', 3)"
+                  />
+                  Suji ko Haluwa
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Ice Cream"
+                    onclick="validateSelection('dessert', 3)"
+                  />
+                  Ice Cream
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Lalmohan"
+                    onclick="validateSelection('dessert', 3)"
+                  />
+                  Lalmohan
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Rasbari"
+                    onclick="validateSelection('dessert', 3)"
+                  />
+                  Rasbari
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Julebi"
+                    onclick="validateSelection('dessert', 3)"
+                  />
+                  Julebi
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Curd"
+                    onclick="validateSelection('dessert', 3)"
+                  />
+                  Curd
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Extra Charge Items Section -->
+        <div class="main-box extra-box">
+          <h2>Extra Charge Items</h2>
+          <div class="category-container">
+            <div class="category-box">
+              <h3>Chaat-Stall</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Pani Puri"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Pani Puri
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Samosa Chaat"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Samosa Chaat
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Dahi Wada"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Dahi Wada
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Tikka Chaat"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Tikka Chaat
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Papadi Chaat"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Papadi Chaat
+                </li>
+              </ul>
+            </div>
+
+            <div class="category-box">
+              <h3>Beverages</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="beverages"
+                    value="Soft drinks"
+                    onclick="validateSelection('beverages', 3)"
+                  />
+                  Soft drinks
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="beverages"
+                    value="Juice"
+                    onclick="validateSelection('beverages', 3)"
+                  />
+                  Juice
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="beverages"
+                    value="Lassi"
+                    onclick="validateSelection('beverages', 3)"
+                  />
+                  Lassi
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Dessert</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Swiss Rolls"
+                    onclick="validateSelection('dessert', 8)"
+                  />
+                  Swiss Rolls
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Black Forest Cake"
+                    onclick="validateSelection('dessert', 8)"
+                  />
+                  Black Forest Cake
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="White Forest Cake"
+                    onclick="validateSelection('dessert', 8)"
+                  />
+                  White Forest Cake
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Cheese Cake"
+                    onclick="validateSelection('dessert', 8)"
+                  />
+                  Cheese Cake
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Chocolate Cake"
+                    onclick="validateSelection('dessert', 8)"
+                  />
+                  Chocolate Cake
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Vanilla Cake"
+                    onclick="validateSelection('dessert', 8)"
+                  />
+                  Vanilla Cake
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Rasmalai"
+                    onclick="validateSelection('dessert', 8)"
+                  />
+                  Rasmalai
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="dessert"
+                    value="Rabadi"
+                    onclick="validateSelection('dessert', 8)"
+                  />
+                  Rabadi
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="book-now-btn" onclick="verifyMenu()">
+        Verify Menu
+      </button>
+      <div id="output"></div>
+
+      <!-- Personal Details -->
+      <section class="book-now">
+        <div class="container">
+          <h1 class="heading" id="eventHeading">Book Your Event</h1>
+
+          <div class="form-group">
+            <label for="name">Full Name<span style="color: red">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone"
+              >Phone Number<span style="color: red">*</span></label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="event-type"
+              >Event Type<span style="color: red">*</span></label
+            >
+            <select id="event-type" name="event-type" required>
+              <option value="">-- Select Event Type --</option>
+              <option value="wedding">Wedding</option>
+              <option value="birthday">Birthday</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="corporate">Anniversary</option>
+              <option value="corporate">Baby Shower</option>
+              <option value="corporate">Reception</option>
+              <option value="corporate">Engagement</option>
+
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date"
+              >Event Date<span style="color: red">*</span></label
+            >
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              placeholder="Enter number of guests"
+              required
+            />
+          </div>
+          <!-- beverages Package -->
+
+          <label for="beverage">Do you want beverages?</label>
+          <div>
+            <input type="checkbox" id="beverage" name="beverage" value="yes" />
+            <label for="beverage">Yes</label>
+
+            <input type="checkbox" id="beverage" name="beverage" value="No" />
+            <label for="beverage">No</label>
+          </div>
+
+          <button type="submit" class="btn">Book Now</button>
+        </div>
+      </section>
+    </form>
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box" data-aos="fade-up">
+          <h3><i class="fas fa-user"></i> Manashvi Banquet</h3>
+          <p>
+            We are a dedicated team of event planners, committed to making your
+            special occasion unforgettable and perfectly tailored to your
+            vision.
+          </p>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <h3>Our Services</h3>
+          <a href="gallery.html"
+            ><i class="fas fa-chevron-right"></i> Professional Photo And Video
+            Services</a
+          >
+          <a href="gallery.html"
+            ><i class="fas fa-chevron-right"></i> Decor & Floral Arrangements</a
+          >
+          <a href="gallery.html"
+            ><i class="fas fa-chevron-right"></i> Food Court</a
+          >
+          <a href="gallery.html"
+            ><i class="fas fa-chevron-right"></i> Extra Services</a
+          >
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <h3>Contact Us</h3>
+          <a href="tel:+9779851125946"
+            ><i class="fas fa-phone"></i> +977-951125946</a
+          >
+          <a href="tel:+9779851110608"
+            ><i class="fas fa-phone"></i> +977-9851110608</a
+          >
+          <a href="mailto:manashvibanquet@gmail.com"
+            ><i class="fas fa-envelope"></i> manashvibanquet@gmail.com</a
+          >
+          <a
+            href="https://www.google.com/maps?q=27.698193776187804,85.36464617546706"
+            ><i class="fas fa-map"></i> Kageshwori Manohara 9, Kathmandu,
+            Nepal</a
+          >
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <h3>Follow Us</h3>
+          <a href="https://www.facebook.com/profile.php?id=100064107932777">
+            <i class="fab fa-facebook-f"></i> facebook
+          </a>
+          <a href="https://www.youtube.com/@manashvibanquetp.ltd.5269">
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+          <a
+            href="https://www.instagram.com/explore/locations/102071131359514/manashvi-banquet-pvt-ltd/"
+          >
+            <i class="fab fa-instagram"></i> instagram
+          </a>
+          <a href="https://www.tiktok.com/@manashvibanquet?_t=8rxP3kbE6hc&_r=1">
+            <i class="fab fa-tiktok"></i> TikTok
+          </a>
+          <a href="https://www.bishaldahal20.com.np" target="_blank">
+            <i class="fas fa-globe"></i> Website
+          </a>
+        </div>
+      </div>
+
+      <div class="credit">
+        &copy; copyright @ 2024 by <span>manashvibanquet</span>
+      </div>
+    </section>
+
     <style>
-      body {
-        font-family: Arial, sans-serif;
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
         background-color: #f4f4f4;
       }
+
+      /* Header Styles */
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 9%;
+        background: var(--white);
+        box-shadow: var(--box-shadow);
+      }
+
+      .header .logo {
+        font-size: 2.2rem;
+        font-weight: bolder;
+        color: var(--primary-color);
+      }
+
+      .header .logo i {
+        color: var(--main-color);
+        padding-right: 0.5rem;
+      }
+
+      .header .navbar a {
+        font-size: 1.7rem;
+        margin-left: 2rem;
+        color: var(--primary-color);
+        padding-block: 1.6rem;
+        position: relative;
+      }
+
+      .header .navbar a:hover {
+        color: var(--main-color);
+      }
+
+      .header .navbar a::before {
+        content: "";
+        position: absolute;
+        height: 0.3rem;
+        border-block: 1px solid var(--main-color);
+        bottom: 0.5rem;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: 0.5s ease;
+      }
+
+      .header .navbar a:is(:hover, :focus)::before {
+        transform: scaleX(1);
+      }
+
+      .header .icons div {
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        font-size: 2rem;
+        border-radius: 0.5rem;
+        margin-left: 0.5rem;
+        cursor: pointer;
+        color: var(--primary-color);
+        background: var(--main-color);
+        text-align: center;
+      }
+      .header .icons div:hover {
+        color: var(--main-color);
+        background: var(--primary-color);
+      }
+
+      #menu {
+        display: none;
+      }
+
+      /* Menu */
       h1 {
         text-align: center;
-        padding: 20px;
-        background-color: #444;
-        color: white;
+        margin-bottom: 30px;
+        color: #333;
       }
-      form {
-        background-color: white;
-        padding: 20px;
-        margin: 20px;
+
+      .menu-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      /* Menu Section */
+      .menu-list {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .menu-list h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+        text-align: center;
+      }
+
+      .menu-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .menu-list li {
+        background-color: #f4f4f4;
+        padding: 12px 20px;
+        font-size: 16px;
+        color: #555;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .menu-list li:hover {
+        background-color: #ffcc00;
+        color: #fff;
+        transform: scale(1.05);
+      }
+
+      .menu-list li a {
+        color: inherit;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        transition: color 0.3s ease;
+      }
+
+      .menu-list li a:hover {
+        color: #fff;
+      }
+
+      .main-box {
+        border: 2px solid #ddd;
         border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
-      h3 {
-        margin-top: 10px;
-        margin-bottom: 5px;
+
+      .extra-box {
+        background-color: #f0f8ff; /* Light blue for distinction */
+        border-color: #87ceeb;
       }
-      .section {
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #444;
+      }
+      .menu-toggle {
+        display: none;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: #333;
+        cursor: pointer;
+      }
+      /* Book Now Section */
+      .book-now {
+        padding: 50px 20px;
+        background: #f4f4f4;
+      }
+
+      .book-now .heading {
+        text-align: center;
         margin-bottom: 20px;
       }
-      button {
-        background-color: #ff5722;
-        color: white;
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      /* Custom Menu Styles */
+      #menuForm {
+        margin-top: 15px;
+      }
+
+      #menuForm select {
+        height: auto;
+        min-height: 120px;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #007bff;
+        color: #fff;
         padding: 10px 20px;
+        text-align: center;
         border: none;
-        border-radius: 5px;
+        border-radius: 4px;
         cursor: pointer;
         font-size: 16px;
       }
-      button:hover {
-        background-color: #e64a19;
+
+      .btn:hover {
+        background: #0056b3;
+      }
+
+      /* Footer Styles */
+      .footer {
+        text-align: center;
+        padding: 10px 20px;
+        background: #333;
+        color: #fff;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .navbar {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .container {
+          padding: 15px;
+        }
+
+        .form-group label {
+          font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+          font-size: 14px;
+        }
+
+        .btn {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header {
+          padding: 10px 15px;
+        }
+
+        .navbar a {
+          font-size: 14px;
+        }
+
+        .container {
+          padding: 10px;
+        }
+
+        .form-group label {
+          font-size: 12px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+          font-size: 12px;
+        }
+
+        .btn {
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+      }
+      /* footer */
+
+      .footer {
+        background: var(--white);
+      }
+
+      .footer .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+      }
+
+      .footer .box-container .box {
+        padding: 1rem 0;
+      }
+
+      .footer .box-container .box h3 {
+        font-size: 2.2rem;
+        color: var(--primary-color);
+        padding: 1rem 0;
+      }
+
+      .footer .box-container .box p {
+        font-size: 1.5rem;
+        color: var(--main-color);
+        padding: 1rem 0;
+        line-height: 2;
+      }
+
+      .footer .box-container .box a {
+        display: block;
+        font-size: 1.4rem;
+        color: var(--main-color);
+        padding: 1rem 0;
+      }
+
+      .footer .box-container .box a i {
+        padding-right: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      .footer .box-container .box a:hover {
+        color: var(--primary-color);
+      }
+
+      .footer .credit {
+        margin-top: 2.5rem;
+        padding: 1rem;
+        padding-top: 2rem;
+        border-top: 0.1rem solid #cecece;
+        text-align: center;
+        color: var(--main-color);
+        font-size: 2rem;
+      }
+
+      .footer .credit span {
+        color: var(--primary-color);
+      }
+
+      /* Responsive Navbar */
+      @media (max-width: 768px) {
+        .navbar {
+          display: none; /* Hide menu on mobile */
+          flex-direction: column; /* Stack items vertically */
+          width: 100%;
+          background-color: #f5f5f5;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          padding: 20px 0;
+        }
+
+        .navbar.active {
+          display: flex;
+        }
+
+        .navbar a {
+          padding: 10px;
+          text-align: center;
+          width: 100%;
+          border-top: 1px solid #ddd;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+      }
+
+      /* Category container for gallery layout */
+      .category-container {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(200px, 1fr)
+        ); /* Adjusts grid columns */
+        gap: 15px; /* Ensures equal space between items */
+        padding: 15px;
+      }
+
+      /* Category box to resemble gallery items */
+      .category-box {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .category-box:hover {
+        transform: scale(1.05); /* Hover effect to enlarge the box */
+      }
+
+      .category-box h3 {
+        text-align: center;
+        color: #f45866;
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+      }
+
+      .category-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .category-box ul li {
+        margin: 5px 0;
+        font-size: 12px;
+        color: #333;
+        text-align: center;
+      }
+
+      /* Add distinct styles for Extra Charge items */
+      .extra-box .category-box {
+        background-color: #e8f4fc; /* Light blue shade */
+        border-color: #87ceeb;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .category-box {
+          flex: 1 1 calc(33.33% - 20px); /* 3 boxes per row */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .category-box {
+          flex: 1 1 calc(33.33% - 20px); /* 2 boxes per row */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .category-box {
+          flex: 1 1 calc(50% - 20px);
+        }
+      }
+
+      /* Categories Section */
+      .categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        gap: 10px;
+      }
+
+      .categories button {
+        background: none;
+        border: 2px solid #ccc;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.3s;
+        white-space: nowrap;
+      }
+
+      .categories button.active {
+        border-color: #ff6347;
+        color: #ff6347;
+      }
+
+      .categories button:hover {
+        background-color: #ff6347;
+        color: white;
+      }
+      /* Centered Book Now Button */
+      .book-now-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px; /* Add space from the content above */
+      }
+
+      .book-now-btn {
+        background-color: #ff6347; /* Tomato color */
+        color: white;
+        padding: 15px 30px; /* Top/Bottom and Left/Right padding */
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 30px; /* Add bottom margin to give space at the bottom */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .book-now-btn:hover {
+        background-color: #e04f34; /* Darker red on hover */
+        transform: scale(1.05); /* Slightly enlarge the button on hover */
+      }
+
+      .book-now-btn:focus {
+        outline: none; /* Remove focus outline */
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+      }
+      /* Gallery Header */
+      .gallery-header {
+        text-align: center;
+        margin: 40px 0;
+        padding-top: 70px;
+      }
+
+      .gallery-header h1 {
+        font-size: 36px;
+        color: #333;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .navbar {
+          width: 100%;
+          flex-direction: column;
+          gap: 10px;
+          align-items: flex-start;
+        }
+
+        .categories button {
+          padding: 8px 10px;
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-header h1 {
+          font-size: 24px;
+        }
+
+        .categories {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .navbar {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: #f5f5f5;
+          padding: 10px;
+          position: absolute;
+          top: 60px; /* Adjust based on header height */
+          left: 0;
+          z-index: 1000;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar.active {
+          display: flex;
+        }
+
+        .navbar a {
+          padding: 10px 15px;
+          border-bottom: 1px solid #ccc;
+        }
+
+        .navbar a:last-child {
+          border-bottom: none;
+        }
       }
     </style>
-  </head>
-  <body>
-    <h1>Diamond Veg Pack</h1>
+    <script>
+      function checkRequired() {
+        // Get all unique input group names
+        const categories = ["roti", "rice", "drinks"]; // Add more categories as needed
 
-    <form id="diamondVegPackForm">
-      <h1>Snacks Menu</h1>
-      <h2>Potato-Based Options</h2>
-      <label>
-        <input type="radio" name="potato" value="Cajun Potato" required />
-        Cajun Potato </label
-      ><br />
-      <label>
-        <input type="radio" name="potato" value="French Fry" />
-        French Fry </label
-      ><br />
-      <label>
-        <input type="radio" name="potato" value="Aloo Chop" />
-        Aloo Chop </label
-      ><br />
-      <label>
-        <input type="radio" name="potato" value="Potato Crispy" />
-        Potato Crispy </label
-      ><br />
-      <label>
-        <input type="radio" name="potato" value="Roasted Potato" />
-        Roasted Potato </label
-      ><br />
-      <label>
-        <input type="radio" name="potato" value="Aloo Tikka" />
-        Aloo Tikka </label
-      ><br />
-      <label>
-        <input type="radio" name="potato" value="Peanuts Potato" />
-        Peanuts Potato </label
-      ><br />
+        // Validate each group
+        let allValid = true;
+        for (const category of categories) {
+          const checkboxes = document.querySelectorAll(
+            `input[name="${category}"]`
+          );
+          const isSelected = Array.from(checkboxes).some((cb) => cb.checked);
 
-      <h2>Paneer-Based Options</h2>
-      <label>
-        <input
-          type="radio"
-          name="paneer"
-          value="Paneer Spring Rolls"
-          required
-        />
-        Paneer Spring Rolls </label
-      ><br />
-      <label>
-        <input type="radio" name="paneer" value="Paneer Pakoda" />
-        Paneer Pakoda </label
-      ><br />
-      <label>
-        <input type="radio" name="paneer" value="Paneer Tikka" />
-        Paneer Tikka </label
-      ><br />
-      <label>
-        <input type="radio" name="paneer" value="Paneer Sasic" />
-        Paneer Sasic </label
-      ><br />
-      <label>
-        <input type="radio" name="paneer" value="Paneer Hariyali" />
-        Paneer Hariyali </label
-      ><br />
-      <label>
-        <input type="radio" name="paneer" value="Paneer Sandeko" />
-        Paneer Sandeko </label
-      ><br />
-      <label>
-        <input type="radio" name="paneer" value="Paneer Chilly" />
-        Paneer Chilly </label
-      ><br />
-      <label>
-        <input type="radio" name="paneer" value="Paneer Sweet & Garlic Sauce" />
-        Paneer Sweet & Garlic Sauce </label
-      ><br />
+          if (!isSelected) {
+            alert(
+              `Please select at least one item from the ${category} category.`
+            );
+            allValid = false;
+            break; // Stop further validation after the first error
+          }
+        }
 
-      <h2>Cheese-Based Options</h2>
-      <label>
-        <input type="radio" name="cheese" value="Cheese Balls" required />
-        Cheese Balls </label
-      ><br />
-      <label>
-        <input type="radio" name="cheese" value="Cheese Sticks" />
-        Cheese Sticks </label
-      ><br />
-      <label>
-        <input type="radio" name="cheese" value="Cheese Rolls" />
-        Cheese Rolls </label
-      ><br />
-      <label>
-        <input type="radio" name="cheese" value="Pineapple Cheese Sticks" />
-        Pineapple Cheese Sticks </label
-      ><br />
-      <label>
-        <input type="radio" name="cheese" value="Cheese Ale Florentine" />
-        Cheese Ale Florentine </label
-      ><br />
+        if (allValid) {
+          alert("All selections are valid! Proceeding...");
+          document.getElementById("foodForm").submit(); // If form submission is needed
+        }
+      }
 
-      <h2>Mushroom-Based Options</h2>
-      <label>
-        <input type="radio" name="mushroom" value="Mushroom Chilly" required />
-        Mushroom Chilly </label
-      ><br />
-      <label>
-        <input type="radio" name="mushroom" value="Mushroom Chhoila" />
-        Mushroom Chhoila </label
-      ><br />
-      <label>
-        <input
-          type="radio"
-          name="mushroom"
-          value="Mushroom Pakoda with Orange Dal"
-        />
-        Mushroom Pakoda with Orange Dal </label
-      ><br />
+      // Validate max selections for each category
+      function validateSelection(category, maxSelections = 1) {
+        // Get all checkboxes for the given category
+        const checkboxes = document.querySelectorAll(
+          `input[name="${category}[]"], input[name="${category}"]`
+        );
 
-      <h2>Veg/Mix Options</h2>
-      <label>
-        <input type="radio" name="veg" value="Veg. Momo" required />
-        Veg. Momo </label
-      ><br />
-      <label>
-        <input type="radio" name="veg" value="Veg. Spring Rolls" />
-        Veg. Spring Rolls </label
-      ><br />
-      <label>
-        <input type="radio" name="veg" value="Veg. Manchurian" />
-        Veg. Manchurian </label
-      ><br />
-      <label>
-        <input type="radio" name="veg" value="Spinach with Paneer Wonton" />
-        Spinach with Paneer Wonton </label
-      ><br />
-      <label>
-        <input type="radio" name="veg" value="Veg. Wanton" />
-        Veg. Wanton </label
-      ><br />
-      <label>
-        <input type="radio" name="veg" value="Veg. Sweet Corn" />
-        Veg. Sweet Corn </label
-      ><br />
-      <label>
-        <input type="radio" name="veg" value="Mix Fruit with Walnut" />
-        Mix Fruit with Walnut </label
-      ><br />
-      <label>
-        <input type="radio" name="veg" value="Mix Salad" />
-        Mix Salad </label
-      ><br />
-      <label>
-        <input type="radio" name="veg" value="Veg. Pakoda" />
-        Veg. Pakoda </label
-      ><br />
+        // Count the number of selected checkboxes
+        const selected = Array.from(checkboxes).filter(
+          (checkbox) => checkbox.checked
+        ).length;
 
-      <!-- Main Course -->
-      <h1>Main Course Menu</h1>
+        // If more than the allowed number of selections are made, uncheck the last selected item
+        if (selected > maxSelections) {
+          alert(
+            `You can only select up to ${maxSelections} item(s) for ${category}`
+          );
 
-      <h2>Rice</h2>
-      <label
-        ><input type="radio" name="rice" value="Steamed Rice" required />
-        Steamed Rice</label
-      ><br />
-      <label
-        ><input type="radio" name="rice" value="Jeera Rice" /> Jeera Rice</label
-      ><br />
-      <label
-        ><input type="radio" name="rice" value="Butter Rice" /> Butter
-        Rice</label
-      ><br />
-      <label
-        ><input type="radio" name="rice" value="Peas Pulao" /> Peas Pulao</label
-      ><br />
-      <label
-        ><input type="radio" name="rice" value="Veg. Pulao" /> Veg. Pulao</label
-      ><br />
-      <label
-        ><input type="radio" name="rice" value="Navrattan Pulao" /> Navrattan
-        Pulao</label
-      ><br />
-      <label
-        ><input type="radio" name="rice" value="Kashmiri Pulao" /> Kashmiri
-        Pulao</label
-      ><br />
-      <label
-        ><input type="radio" name="rice" value="Veg. Biryani" /> Veg.
-        Biryani</label
-      ><br />
-      <label
-        ><input type="radio" name="rice" value="Veg. Fried Rice" /> Veg. Fried
-        Rice</label
-      ><br />
+          // Find and uncheck the last selected checkbox
+          checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+              checkbox.checked = false;
+            }
+          });
+        }
+      }
 
-      <h2>Naan/Roti</h2>
-      <label
-        ><input type="radio" name="naan" value="Garlic Naan" required /> Garlic
-        Naan</label
-      ><br />
-      <label
-        ><input type="radio" name="naan" value="Butter Naan" /> Butter
-        Naan</label
-      ><br />
-      <label
-        ><input type="radio" name="naan" value="Plain Naan" /> Plain Naan</label
-      ><br />
-      <label
-        ><input type="radio" name="naan" value="Green Puri" /> Green Puri</label
-      ><br />
-      <label
-        ><input type="radio" name="naan" value="Vratta Puri" /> Vratta
-        Puri</label
-      ><br />
-      <label><input type="radio" name="naan" value="Pasta" /> Pasta</label
-      ><br />
-      <label
-        ><input type="radio" name="naan" value="Veg. Chowmein" /> Veg.
-        Chowmein</label
-      ><br />
-      <label
-        ><input type="radio" name="naan" value="Plain Roti" /> Plain Roti</label
-      ><br />
+      // Display selected items
+      function verifyMenu() {
+        const output = document.getElementById("output");
+        const selectedItems = [];
 
-      <h2>Dal</h2>
-      <label
-        ><input type="radio" name="dal" value="Paneer Yellow Dal" required />
-        Paneer Yellow Dal</label
-      ><br />
-      <label
-        ><input type="radio" name="dal" value="White Beans Curry" /> White Beans
-        Curry</label
-      ><br />
-      <label
-        ><input type="radio" name="dal" value="Black Dal Thakali Style" /> Black
-        Dal Thakali Style</label
-      ><br />
-      <label
-        ><input type="radio" name="dal" value="Dal Tadka" /> Dal Tadka</label
-      ><br />
-      <label
-        ><input type="radio" name="dal" value="Rajma Dal" /> Rajma Dal</label
-      ><br />
+        // Find all sections with h3 and corresponding inputs
+        document.querySelectorAll(".category-box").forEach((category) => {
+          const categoryName = category.querySelector("h3").innerText; // Get the topic name
+          const selectedInputs = category.querySelectorAll(
+            'input[type="checkbox"]:checked'
+          );
 
-      <h2>Vegetable Curry</h2>
-      <label
-        ><input
-          type="radio"
-          name="veg-curry"
-          value="Mixed Vegetable Dry (Seasonal)"
-          required
-        />
-        Mixed Vegetable Dry (Seasonal)</label
-      ><br />
-      <label
-        ><input type="radio" name="veg-curry" value="Mixed Vegetable Gravy" />
-        Mixed Vegetable Gravy</label
-      ><br />
-      <label
-        ><input
-          type="radio"
-          name="veg-curry"
-          value="Mixed Vegetable Jalfrezi"
-        />
-        Mixed Vegetable Jalfrezi</label
-      ><br />
-      <label
-        ><input type="radio" name="veg-curry" value="Aalu Tama" /> Aalu
-        Tama</label
-      ><br />
-      <label
-        ><input type="radio" name="veg-curry" value="Aalu Dum Achari" /> Aalu
-        Dum Achari</label
-      ><br />
-      <label
-        ><input type="radio" name="veg-curry" value="Katahar" /> Katahar</label
-      ><br />
+          // If any input is selected under this category, add it to the list
+          if (selectedInputs.length > 0) {
+            const selectedValues = Array.from(selectedInputs)
+              .map((input) => input.value)
+              .join(", "); // Join multiple selections with a comma
+            selectedItems.push(
+              `<li><span style="color: blue;">${categoryName}:</span> <span style="color: green;">${selectedValues}</span></li>`
+            );
+          }
+        });
 
-      <h2>Paneer Dishes</h2>
-      <label
-        ><input type="radio" name="paneer" value="Paneer Jalfrazi" required />
-        Paneer Jalfrazi</label
-      ><br />
-      <label
-        ><input type="radio" name="paneer" value="Paneer Butter Masala" />
-        Paneer Butter Masala</label
-      ><br />
-      <label
-        ><input type="radio" name="paneer" value="Peas Paneer" /> Peas
-        Paneer</label
-      ><br />
-      <label
-        ><input type="radio" name="paneer" value="Malaya Kofta" /> Malaya
-        Kofta</label
-      ><br />
-      <label
-        ><input type="radio" name="paneer" value="Capsicum Paneer Bhujia" />
-        Capsicum Paneer Bhujia</label
-      ><br />
-      <label
-        ><input type="radio" name="paneer" value="Paneer Achar" /> Paneer
-        Achar</label
-      ><br />
+        // Display the selected menu
+        output.innerHTML = `<h3>Selected Menu:</h3><ul>${selectedItems.join(
+          ""
+        )}</ul>`;
+      }
 
-      <h2>Mushroom Dishes</h2>
-      <label
-        ><input
-          type="radio"
-          name="mushroom"
-          value="Mutter Mushroom Curry"
-          required
-        />
-        Mutter Mushroom Curry</label
-      ><br />
-      <label
-        ><input type="radio" name="mushroom" value="Fresh Mushroom" /> Fresh
-        Mushroom</label
-      ><br />
-      <label
-        ><input type="radio" name="mushroom" value="Grilled Mushroom" /> Grilled
-        Mushroom</label
-      ><br />
-      <label
-        ><input type="radio" name="mushroom" value="Mushroom Chilly" /> Mushroom
-        Chilly</label
-      ><br />
-      <label
-        ><input
-          type="radio"
-          name="mushroom"
-          value="Mushroom with Hot Garlic Sauce"
-        />
-        Mushroom with Hot Garlic Sauce</label
-      ><br />
-
-      <h2>Seasonal Saag</h2>
-      <label
-        ><input type="radio" name="saag" value="Seasonal Saag" required />
-        Seasonal Saag</label
-      ><br />
-
-      <h2>Salad</h2>
-      <label
-        ><input type="radio" name="salad" value="Green Salad" required /> Green
-        Salad</label
-      ><br />
-      <label
-        ><input type="radio" name="salad" value="Veg. Russian Salad" /> Veg.
-        Russian Salad</label
-      ><br />
-      <label
-        ><input type="radio" name="salad" value="Garden Green Salad" /> Garden
-        Green Salad</label
-      ><br />
-      <label
-        ><input type="radio" name="salad" value="Kachumber Salad" /> Kachumber
-        Salad</label
-      ><br />
-      <label
-        ><input type="radio" name="salad" value="Fruit Salad" /> Fruit
-        Salad</label
-      ><br />
-      <label
-        ><input type="radio" name="salad" value="Pasta Salad" /> Pasta
-        Salad</label
-      ><br />
-      <label
-        ><input type="radio" name="salad" value="Chana Chat" /> Chana
-        Chat</label
-      ><br />
-
-      <h2>Achar/Pickles</h2>
-      <label
-        ><input type="radio" name="achar" value="Nepali Achar" required />
-        Nepali Achar</label
-      ><br />
-      <label
-        ><input type="radio" name="achar" value="Tomato Achar" /> Tomato
-        Achar</label
-      ><br />
-      <label
-        ><input type="radio" name="achar" value="Lapsi Candy" /> Lapsi
-        Candy</label
-      ><br />
-      <label
-        ><input type="radio" name="achar" value="Gundruk Achar" /> Gundruk
-        Achar</label
-      ><br />
-      <label
-        ><input type="radio" name="achar" value="Mango Sweets Pickle" /> Mango
-        Sweets Pickle</label
-      ><br />
-      <label
-        ><input type="radio" name="achar" value="Methi Achar" /> Methi
-        Achar</label
-      ><br />
-      <label
-        ><input type="radio" name="achar" value="Indian Mixed Achar" /> Indian
-        Mixed Achar</label
-      ><br />
-
-      <h2>Papad</h2>
-      <label
-        ><input type="radio" name="papad" value="Dry Papad" required /> Dry
-        Papad</label
-      ><br />
-      <!-- Soup Section -->
-      <h2>Soup (Any One)</h2>
-      <label
-        ><input type="radio" name="soup" value="Veg. Soup" required /> Veg.
-        Soup</label
-      ><br />
-      <label
-        ><input type="radio" name="soup" value="Mushroom Soup" /> Mushroom
-        Soup</label
-      ><br />
-      <label
-        ><input type="radio" name="soup" value="Hot & Sour Veg. Soup" /> Hot &
-        Sour Veg. Soup</label
-      ><br />
-      <label
-        ><input type="radio" name="soup" value="Sweet Corn Veg. Soup" /> Sweet
-        Corn Veg. Soup</label
-      ><br />
-      <h2>Dessert Options</h2>
-      <label
-        ><input
-          type="radio"
-          name="dessert_option"
-          value="Gazar Ko Halwa"
-          required
-        />
-        Gazar Ko Halwa (Seasonal)</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_option" value="Fruit Salad" /> Fruit
-        Salad</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_option" value="Suji Ko Haluwa" />
-        Suji Ko Haluwa</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_option" value="Raisin Salad" />
-        Raisin Salad</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_option" value="Ice Cream" /> Ice
-        Cream</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_option" value="Lalmohan" />
-        Lalmohan</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_option" value="Rasbari" />
-        Rasbari</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_option" value="Jalebi" />
-        Jalebi</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_option" value="Curd" /> Curd</label
-      ><br />
-
-      <!-- Next -->
-      <h1>Extra charge items</h1>
-      <!-- Dessert Section -->
-
-      <h2>Dessert Items with Extra Cost</h2>
-      <label
-        ><input
-          type="radio"
-          name="dessert_extra"
-          value="Swiss Rolls"
-          required
-        />
-        Swiss Rolls</label
-      ><br />
-      <label
-        ><input
-          type="radio"
-          name="dessert_extra"
-          value="Black or White Forest Cake"
-        />
-        Black or White Forest Cake</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_extra" value="Cheese Cake" /> Cheese
-        Cake</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_extra" value="Chocolate Cake" />
-        Chocolate Cake</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_extra" value="Vanilla Cake" />
-        Vanilla Cake</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_extra" value="Rasmalai" />
-        Rasmalai</label
-      ><br />
-      <label
-        ><input type="radio" name="dessert_extra" value="Rabadi" />
-        Rabadi</label
-      ><br />
-
-      <!-- Chaat-Stall Section -->
-      <h2>Chaat-Stall (With Extra Cost)</h2>
-      <label
-        ><input type="radio" name="chaat" value="Pani Puri" required /> Pani
-        Puri</label
-      ><br />
-      <label
-        ><input type="radio" name="chaat" value="Samosa Chaat" /> Samosa
-        Chaat</label
-      ><br />
-      <label
-        ><input type="radio" name="chaat" value="Dahi Wada" /> Dahi Wada</label
-      ><br />
-      <label
-        ><input type="radio" name="chaat" value="Tikka Chaat" /> Tikka
-        Chaat</label
-      ><br />
-      <label
-        ><input type="radio" name="chaat" value="Papadi Chaat" /> Papadi
-        Chaat</label
-      ><br />
-      <label
-        ><input type="radio" name="chaat" value="Mixed Chaat" /> Mixed
-        Chaat</label
-      ><br />
-
-      <button type="submit">Submit</button>
-    </form>
+      // document
+      //   .getElementById("menu-toggle")
+      //   .addEventListener("click", function () {
+      //     document.getElementById("navbar").classList.toggle("active");
+      //   });
+    </script>
   </body>
 </html>

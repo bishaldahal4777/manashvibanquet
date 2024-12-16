@@ -276,7 +276,7 @@ input[type="email"] {
 .services .box-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* This ensures 4 equal columns */
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .services .box-container .box {
@@ -288,8 +288,8 @@ input[type="email"] {
 }
 
 .services .box-container .box img {
-  margin: 1rem 0;
-  height: 15rem;
+  margin: 0.5rem 0;
+  height: 10rem;
   transition: 500ms ease;
 }
 
@@ -298,13 +298,13 @@ input[type="email"] {
 }
 
 .services .box-container .box h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 1rem 0;
   color: var(--primary-color);
 }
 
 .services .box-container .box p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--light-black);
   line-height: 2;
 }
@@ -316,7 +316,7 @@ input[type="email"] {
 }
 
 .services .box-container .box .extra-services-list li {
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: var(--dark-gray); /* Adjust color as needed */
   padding: 1rem 0;
   display: flex;
@@ -326,7 +326,7 @@ input[type="email"] {
 
 .services .box-container .box .extra-services-list li::before {
   content: "\2022"; /* Unicode character for bullet */
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--primary-color); /* Bullet color */
   position: absolute;
   left: -1.5rem;
@@ -355,8 +355,8 @@ input[type="email"] {
 
 .plan .box-container .box {
   background: var(--white);
-  width: 22rem;
-  height: 38rem;
+  width: 25rem;
+  height: 25rem;
   text-align: center;
   box-shadow: var(--box-shadow);
   position: relative;
@@ -428,7 +428,6 @@ input[type="email"] {
   max-height: 0; /* Start hidden */
   overflow: hidden; /* Hide overflowing content */
 }
-
 /* end */
 
 /* Customizable Package Info Section */
@@ -438,6 +437,7 @@ input[type="email"] {
   align-items: center;
   text-align: center;
   background: #f4f4f4; /* Adjust background color as needed */
+  margin-top: -50px;
   padding: 2rem 0;
 }
 

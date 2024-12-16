@@ -21,7 +21,7 @@
         <a href="index.html">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#services">Services</a>
-        <a href="package.html">Package</a>
+        <a href="index.html#plan">Package</a>
         <a href="index.html#contact">Contact</a>
       </nav>
       <button class="menu-toggle" id="menu-toggle"></button>
@@ -37,9 +37,17 @@
     >
       <div class="gallery-header">
         <h1>Customized Menu Pack</h1>
+        <div class="item-name-contain">
+          <p>
+            Snacks: 4 Item<br />
+            Main Course: 10 Items<br />
+            Dessert: 2 Item
+          </p>
+        </div>
         <!-- Package Includes Section -->
         <div class="main-box">
-          <h2>Select From Each List Starting From 1000</h2>
+          <h2>Select From Each List Starting From 800</h2>
+
           <div class="category-container">
             <div class="category-box">
               <h3>Roti (1 item)</h3>
@@ -989,6 +997,164 @@
                 </li>
               </ul>
             </div>
+
+            <div class="category-box">
+              <h3>Chaat-Stall</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Pani Puri"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Pani Puri
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Samosa Chaat"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Samosa Chaat
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Dahi Wada"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Dahi Wada
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Tikka Chaat"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Tikka Chaat
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Papadi Chaat"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Papadi Chaat
+                </li>
+              </ul>
+            </div>
+
+            <div class="category-box">
+              <h3>Others</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="DJ"
+                    onclick="validateSelection('others', 5)"
+                  />
+                  DJ
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Camp Fire"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Camp Fire
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Mandap Setup"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Mandap Setup
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Pick and Drop"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Pick And Drop
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="OutDoor Catering"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Outdoor Catering
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Kids Playground"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Kids Playground
+                </li>
+              </ul>
+            </div>
+            <div class="category-box">
+              <h3>Beverage</h3>
+
+              <!-- Non-Alcohol Section -->
+              <div class="beverage-category">
+                <h4>Non-Alcohol</h4>
+                <ul>
+                  <li>
+                    <input
+                      type="checkbox"
+                      name="non-alcohol"
+                      value="Soft Drinks"
+                    />
+                    Soft Drinks
+                  </li>
+                  <li>
+                    <input type="checkbox" name="non-alcohol" value="Juice" />
+                    Juice
+                  </li>
+                  <li>
+                    <input type="checkbox" name="non-alcohol" value="Lassi" />
+                    Lassi
+                  </li>
+                  <li>
+                    <input type="checkbox" name="non-alcohol" value="Mahi" />
+                    Mahi
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Alcohol Section -->
+              <div class="beverage-category">
+                <h4>Alcohol</h4>
+                <ul>
+                  <li>
+                    <label>
+                      <input type="radio" name="alcohol" value="Yes" /> Yes
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="alcohol" value="No" /> No
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1066,16 +1232,7 @@
           </div>
           <!-- beverages Package -->
 
-          <label for="beverage">Do you want beverages?</label>
-          <div>
-            <input type="checkbox" id="beverage" name="beverage" value="yes" />
-            <label for="beverage">Yes</label>
-
-            <input type="checkbox" id="beverage" name="beverage" value="No" />
-            <label for="beverage">No</label>
-          </div>
-
-          <button type="submit" class="btn">Book Now</button>
+          <button type="submit" class="btn">Submit</button>
         </div>
       </section>
     </form>
@@ -1320,12 +1477,43 @@
         background-color: #f0f8ff; /* Light blue for distinction */
         border-color: #87ceeb;
       }
+      .main-box h2 {
+        background-image: url("background-shape.png"); /* Replace 'your-image.jpg' with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; /* Centers the image */
+        color: white; /* Makes text readable if the image is dark */
+        padding: 20px; /*Adds some padding inside the div*/
+        position: relative;
+        z-index: 2; /* Ensures the text appears above the overlay */
+        text-align: center; /* Centers the text */
+        min-height: 20px; /* Ensure the div has some height even without content */
+        width: 50%; /* Optional: Adjusts the width of the div */
+      }
 
+      .item-name-contain p {
+        display: inline-block; /* Restrict background to the text */
+        background-image: url("background shape.png"); /* Replace 'your-image.jpg' with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; /* Centers the image */
+        color: white; /* Makes text readable if the image is dark */
+        padding: 20px; /*Adds some padding inside the div*/
+        position: relative;
+        z-index: 2; /* Ensures the text appears above the overlay */
+        text-align: center; /* Centers the text */
+        /* min-height: 20px; */
+        width: 25%;
+        margin: 0; /* Remove extra space around the <p> tag */
+        padding: 5px; /* Optional: Add space around the text */
+      }
       h2 {
         text-align: center;
         margin-bottom: 20px;
+        font-size: 20px;
         color: #444;
+        /* background-color: yellow; */
+        display: inline-block; /* Restrict background to the text */
       }
+
       .menu-toggle {
         display: none;
         font-size: 30px;
@@ -1404,6 +1592,13 @@
         padding: 10px 20px;
         background: #333;
         color: #fff;
+      }
+
+      .item-name-contain {
+        font-size: 16px; /* Adjust text size */
+        margin: 10px; /* Spacing around the div */
+        text-align: left; /* Align text within the div to the left */
+        width: auto; /* Let width adjust to the content */
       }
 
       /* Responsive Design */

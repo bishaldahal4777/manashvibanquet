@@ -21,7 +21,7 @@
         <a href="index.html">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#services">Services</a>
-        <a href="package.html">Package</a>
+        <a href="index.html#plan">Package</a>
         <a href="index.html#contact">Contact</a>
       </nav>
       <button class="menu-toggle" id="menu-toggle"></button>
@@ -37,6 +37,13 @@
     >
       <div class="gallery-header">
         <h1>Diamong Non Veg Menu Pack</h1>
+        <div class="item-name-contain">
+          <p>
+            Snacks: 10 Item<br />
+            Main Course: 17 Items<br />
+            Dessert: 3 Item
+          </p>
+        </div>
         <!-- Snacks Includes Section -->
         <div class="main-box">
           <h2>Snacks</h2>
@@ -1198,6 +1205,13 @@
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+        <!-- Dessert -->
+        <div class="main-box">
+          <!--Dessert Item -->
+          <h2>Dessert</h2>
+          <div class="category-container">
             <div class="category-box">
               <h3>Dessert (Any 3 items)</h3>
               <ul>
@@ -1765,12 +1779,43 @@
         background-color: #f0f8ff; /* Light blue for distinction */
         border-color: #87ceeb;
       }
+      .main-box h2 {
+        background-image: url("background-shape.png"); /* Replace 'your-image.jpg' with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; /* Centers the image */
+        color: white; /* Makes text readable if the image is dark */
+        padding: 20px; /*Adds some padding inside the div*/
+        position: relative;
+        z-index: 2; /* Ensures the text appears above the overlay */
+        text-align: center; /* Centers the text */
+        min-height: 20px; /* Ensure the div has some height even without content */
+        width: 50%; /* Optional: Adjusts the width of the div */
+      }
 
+      .item-name-contain p {
+        display: inline-block; /* Restrict background to the text */
+        background-image: url("background shape.png"); /* Replace 'your-image.jpg' with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; /* Centers the image */
+        color: white; /* Makes text readable if the image is dark */
+        padding: 20px; /*Adds some padding inside the div*/
+        position: relative;
+        z-index: 2; /* Ensures the text appears above the overlay */
+        text-align: center; /* Centers the text */
+        /* min-height: 20px; */
+        width: 25%;
+        margin: 0; /* Remove extra space around the <p> tag */
+        padding: 5px; /* Optional: Add space around the text */
+      }
       h2 {
         text-align: center;
         margin-bottom: 20px;
+        font-size: 20px;
         color: #444;
+        /* background-color: yellow; */
+        display: inline-block; /* Restrict background to the text */
       }
+
       .menu-toggle {
         display: none;
         font-size: 30px;
@@ -1849,6 +1894,13 @@
         padding: 10px 20px;
         background: #333;
         color: #fff;
+      }
+
+      .item-name-contain {
+        font-size: 16px; /* Adjust text size */
+        margin: 10px; /* Spacing around the div */
+        text-align: left; /* Align text within the div to the left */
+        width: auto; /* Let width adjust to the content */
       }
 
       /* Responsive Design */

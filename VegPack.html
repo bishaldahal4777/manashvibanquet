@@ -21,7 +21,7 @@
         <a href="index.html">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#services">Services</a>
-        <a href="package.html">Package</a>
+        <a href="index.html#plan">Package</a>
         <a href="index.html#contact">Contact</a>
       </nav>
       <button class="menu-toggle" id="menu-toggle"></button>
@@ -37,9 +37,17 @@
     >
       <div class="gallery-header">
         <h1>Veg Menu Pack</h1>
+        <div class="item-name-contain">
+          <p>
+            Snacks: 7 Item<br />
+            Main Course: 14 Items<br />
+            Dessert: 3 Item
+          </p>
+        </div>
         <!-- Package Includes Section -->
         <div class="main-box">
           <h2>Snacks</h2>
+
           <div class="category-container">
             <div class="category-box">
               <h3>Potato (1 item)</h3>
@@ -1051,263 +1059,87 @@
                 </li>
               </ul>
             </div>
-            <div class="category-box">
-              <h3>Dessert (Any 3 items)</h3>
-              <ul>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="dessert"
-                    value="Gazar ko Haluwa"
-                    onclick="validateSelection('dessert', 3)"
-                  />
-                  Gazar ko Haluwa (Seasonal)
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="dessert"
-                    value="Suji ko Haluwa"
-                    onclick="validateSelection('dessert', 3)"
-                  />
-                  Suji ko Haluwa
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="dessert"
-                    value="Ice Cream"
-                    onclick="validateSelection('dessert', 3)"
-                  />
-                  Ice Cream
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="dessert"
-                    value="Lalmohan"
-                    onclick="validateSelection('dessert', 3)"
-                  />
-                  Lalmohan
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="dessert"
-                    value="Rasbari"
-                    onclick="validateSelection('dessert', 3)"
-                  />
-                  Rasbari
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="dessert"
-                    value="Julebi"
-                    onclick="validateSelection('dessert', 3)"
-                  />
-                  Julebi
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="dessert"
-                    value="Curd"
-                    onclick="validateSelection('dessert', 3)"
-                  />
-                  Curd
-                </li>
-              </ul>
+            <div class="main-box">
+              <!--Dessert Item -->
+              <h2>Dessert</h2>
+              <div class="category-container">
+                <div class="category-box">
+                  <h3>Dessert (Any 3 items)</h3>
+                  <ul>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="dessert"
+                        value="Gazar ko Haluwa"
+                        onclick="validateSelection('dessert', 3)"
+                      />
+                      Gazar ko Haluwa (Seasonal)
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="dessert"
+                        value="Suji ko Haluwa"
+                        onclick="validateSelection('dessert', 3)"
+                      />
+                      Suji ko Haluwa
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="dessert"
+                        value="Ice Cream"
+                        onclick="validateSelection('dessert', 3)"
+                      />
+                      Ice Cream
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="dessert"
+                        value="Lalmohan"
+                        onclick="validateSelection('dessert', 3)"
+                      />
+                      Lalmohan
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="dessert"
+                        value="Rasbari"
+                        onclick="validateSelection('dessert', 3)"
+                      />
+                      Rasbari
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="dessert"
+                        value="Julebi"
+                        onclick="validateSelection('dessert', 3)"
+                      />
+                      Julebi
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="dessert"
+                        value="Curd"
+                        onclick="validateSelection('dessert', 3)"
+                      />
+                      Curd
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
         <!-- Extra Charge Items Section -->
         <div class="main-box extra-box">
           <h2>Extra Charge Items</h2>
           <div class="category-container">
-            <div class="category-box">
-              <h3>Mutton with Extra Cost</h3>
-              <ul>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="mutton"
-                    value="Whole Mutton BBQ"
-                    onclick="validateSelection('mutton', 8)"
-                  />
-                  Whole Mutton BBQ
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="mutton"
-                    value="Mutton Mo: Mo:"
-                    onclick="validateSelection('mutton', 8)"
-                  />
-                  Mutton Mo: Mo:
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="mutton"
-                    value="Mutton Wanton"
-                    onclick="validateSelection('mutton', 8)"
-                  />
-                  Mutton Wanton
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="mutton"
-                    value="Mutton Kebab"
-                    onclick="validateSelection('mutton', 8)"
-                  />
-                  Mutton Kebab
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="mutton"
-                    value="Mutton Sekuwa"
-                    onclick="validateSelection('mutton', 8)"
-                  />
-                  Mutton Sekuwa
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="mutton"
-                    value="Mutton Sandheko"
-                    onclick="validateSelection('mutton', 8)"
-                  />
-                  Mutton Sandheko
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="mutton"
-                    value="Mutton Boil"
-                    onclick="validateSelection('mutton', 8)"
-                  />
-                  Mutton Boil
-                </li>
-              </ul>
-            </div>
-            <div class="category-box">
-              <h3>Fish with Extra Cost</h3>
-              <ul>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="fish"
-                    value="Fish Grill"
-                    onclick="validateSelection('fish', 4)"
-                  />
-                  Fish Grill
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="fish"
-                    value="Tandoori Fish Kabab"
-                    onclick="validateSelection('fish', 4)"
-                  />
-                  Tandoori Fish Kabab
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="fish"
-                    value="Grilled Prawn"
-                    onclick="validateSelection('fish', 4)"
-                  />
-                  Grilled Prawn
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="fish"
-                    value="Prawn Curry"
-                    onclick="validateSelection('fish', 4)"
-                  />
-                  Prawn Curry
-                </li>
-              </ul>
-            </div>
-            <div class="category-box">
-              <h3>Bandel with Extra Cost</h3>
-              <ul>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="bandel"
-                    value="Bandel Steam"
-                    onclick="validateSelection('bandel', 5)"
-                  />
-                  Bandel Steam
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="bandel"
-                    value="Bandel Fried"
-                    onclick="validateSelection('bandel', 5)"
-                  />
-                  Bandel Fried
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="bandel"
-                    value="Bandel Chilly"
-                    onclick="validateSelection('bandel', 5)"
-                  />
-                  Bandel Chilly
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="bandel"
-                    value="Bandel Sandheko"
-                    onclick="validateSelection('bandel', 5)"
-                  />
-                  Bandel Sandheko
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="bandel"
-                    value="Bandel Curry"
-                    onclick="validateSelection('bandel', 5)"
-                  />
-                  Bandel Curry
-                </li>
-              </ul>
-            </div>
-            <div class="category-box">
-              <h3>Chicken with Extra Cost</h3>
-              <ul>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="chickenExtra"
-                    value="Whose Chicken BBQ"
-                    onclick="validateSelection('chickenExtra', 2)"
-                  />
-                  Whose Chicken BBQ
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="chickenExtra"
-                    value="Chicken Wings &amp; Leg BBQ"
-                    onclick="validateSelection('chickenExtra', 2)"
-                  />
-                  Chicken Wings &amp; Leg BBQ
-                </li>
-              </ul>
-            </div>
-
             <div class="category-box">
               <h3>Chaat-Stall</h3>
               <ul>
@@ -1358,7 +1190,6 @@
                 </li>
               </ul>
             </div>
-
             <div class="category-box">
               <h3>Beverages</h3>
               <ul>
@@ -1546,15 +1377,6 @@
             />
           </div>
           <!-- beverages Package -->
-
-          <label for="beverage">Do you want beverages?</label>
-          <div>
-            <input type="checkbox" id="beverage" name="beverage" value="yes" />
-            <label for="beverage">Yes</label>
-
-            <input type="checkbox" id="beverage" name="beverage" value="No" />
-            <label for="beverage">No</label>
-          </div>
 
           <button type="submit" class="btn">Book Now</button>
         </div>
@@ -1802,11 +1624,51 @@
         border-color: #87ceeb;
       }
 
+      .main-box h2 {
+        background-image: url("background-shape.png"); /* Replace 'your-image.jpg' with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; /* Centers the image */
+        color: white; /* Makes text readable if the image is dark */
+        padding: 20px; /*Adds some padding inside the div*/
+        position: relative;
+        z-index: 2; /* Ensures the text appears above the overlay */
+        text-align: center; /* Centers the text */
+        min-height: 20px; /* Ensure the div has some height even without content */
+        width: 50%; /* Optional: Adjusts the width of the div */
+      }
+      .main-box h2 {
+        font-size: 12px;
+      }
+      .item-name-contain p {
+        display: inline-block; /* Restrict background to the text */
+        background-image: url("background shape.png"); /* Replace 'your-image.jpg' with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; /* Centers the image */
+        color: white; /* Makes text readable if the image is dark */
+        padding: 20px; /*Adds some padding inside the div*/
+        position: relative;
+        z-index: 2; /* Ensures the text appears above the overlay */
+        text-align: center; /* Centers the text */
+        /* min-height: 20px; */
+        width: 25%;
+        margin: 0; /* Remove extra space around the <p> tag */
+        padding: 5px; /* Optional: Add space around the text */
+      }
       h2 {
         text-align: center;
         margin-bottom: 20px;
+        font-size: 20px;
         color: #444;
+        /* background-color: yellow; */
+        display: inline-block; /* Restrict background to the text */
       }
+      .item-name-contain {
+        font-size: 16px; /* Adjust text size */
+        margin: 10px; /* Spacing around the div */
+        text-align: left; /* Align text within the div to the left */
+        width: auto; /* Let width adjust to the content */
+      }
+
       .menu-toggle {
         display: none;
         font-size: 30px;

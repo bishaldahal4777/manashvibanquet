@@ -1338,36 +1338,65 @@
             </div>
 
             <div class="category-box">
-              <h3>Beverages</h3>
-              <ul>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="beverages"
-                    value="Soft drinks"
-                    onclick="validateSelection('beverages', 3)"
-                  />
-                  Soft drinks
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="beverages"
-                    value="Juice"
-                    onclick="validateSelection('beverages', 3)"
-                  />
-                  Juice
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="beverages"
-                    value="Lassi"
-                    onclick="validateSelection('beverages', 3)"
-                  />
-                  Lassi
-                </li>
-              </ul>
+              <h3>Beverage</h3>
+              <!-- Beverage Category with two columns for Non-Alcohol and Alcohol -->
+              <div class="beverage-category">
+                <div class="beverage-column">
+                  <!-- Non-Alcohol Section -->
+                  <h4>Non-Alcohol</h4>
+                  <ul>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="non-alcohol"
+                        value="Soft Drinks"
+                      />
+                      Soft Drinks
+                    </li>
+                    <li>
+                      <input type="checkbox" name="non-alcohol" value="Juice" />
+                      Juice
+                    </li>
+                    <li>
+                      <input type="checkbox" name="non-alcohol" value="Lassi" />
+                      Lassi
+                    </li>
+                    <li>
+                      <input type="checkbox" name="non-alcohol" value="Mahi" />
+                      Mahi
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="beverage-column">
+                  <!-- Alcohol Section -->
+                  <h4>Alcohol</h4>
+                  <ul>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="alcohol"
+                          value="Yes"
+                          onclick="validateSelection('alcohol')"
+                        />
+                        Yes
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="alcohol"
+                          value="No"
+                          onclick="validateSelection('alcohol')"
+                        />
+                        No
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="category-box">
               <h3>Dessert</h3>
@@ -1446,99 +1475,91 @@
                 </li>
               </ul>
             </div>
+            <div class="category-box">
+              <h3>Others</h3>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="DJ"
+                    onclick="validateSelection('others', 5)"
+                  />
+                  DJ
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Camp Fire"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Camp Fire
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Mandap Setup"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Mandap Setup
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Pick and Drop"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Pick And Drop
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="OutDoor Catering"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Outdoor Catering
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    name="chaat"
+                    value="Kids Playground"
+                    onclick="validateSelection('chaat', 5)"
+                  />
+                  Kids Playground
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <button type="button" class="book-now-btn" onclick="verifyMenu()">
         Verify Menu
       </button>
-      <div id="output"></div>
-
-      <!-- Personal Details -->
-      <section class="book-now">
-        <div class="container">
-          <h1 class="heading" id="eventHeading">Book Your Event</h1>
-
-          <div class="form-group">
-            <label for="name">Full Name<span style="color: red">*</span></label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your full name"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-            />
-          </div>
-          <div class="form-group">
-            <label for="phone"
-              >Phone Number<span style="color: red">*</span></label
-            >
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Enter your phone number"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="event-type"
-              >Event Type<span style="color: red">*</span></label
-            >
-            <select id="event-type" name="event-type" required>
-              <option value="">-- Select Event Type --</option>
-              <option value="wedding">Wedding</option>
-              <option value="birthday">Birthday</option>
-              <option value="corporate">Corporate Event</option>
-              <option value="corporate">Anniversary</option>
-              <option value="corporate">Baby Shower</option>
-              <option value="corporate">Reception</option>
-              <option value="corporate">Engagement</option>
-
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="date"
-              >Event Date<span style="color: red">*</span></label
-            >
-            <input type="date" id="date" name="date" required />
-          </div>
-          <div class="form-group">
-            <label for="guests">Number of Guests</label>
-            <input
-              type="number"
-              id="guests"
-              name="guests"
-              placeholder="Enter number of guests"
-              required
-            />
-          </div>
-          <!-- beverages Package -->
-
-          <label for="beverage">Do you want beverages?</label>
-          <div>
-            <input type="checkbox" id="beverage" name="beverage" value="yes" />
-            <label for="beverage">Yes</label>
-
-            <input type="checkbox" id="beverage" name="beverage" value="No" />
-            <label for="beverage">No</label>
-          </div>
-
-          <button type="submit" class="btn">Book Now</button>
-        </div>
-      </section>
     </form>
 
+    <!-- Modal -->
+    <div id="menuModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-header">
+          <h2>Selected Menu</h2>
+        </div>
+        <div class="modal-body">
+          <div id="output">
+            <!-- Selected items will appear here -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="book-now" onclick="redirectToForm()">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
     <section class="footer">
       <div class="box-container">
         <div class="box" data-aos="fade-up">
@@ -1613,6 +1634,31 @@
     </section>
 
     <style>
+      /* Flexbox layout for the beverage section */
+      .beverage-category {
+        display: flex;
+        justify-content: space-between; /* Creates two columns */
+        gap: 20px; /* Space between columns */
+      }
+
+      .beverage-column {
+        flex: 1; /* Ensures each column takes equal space */
+      }
+
+      .beverage-category h4 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .beverage-column ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .beverage-column li {
+        margin-bottom: 10px;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -2257,6 +2303,105 @@
           border-bottom: none;
         }
       }
+      /* Modal Styles */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Black background with opacity */
+      }
+
+      .modal-content {
+        position: relative; /* Ensures the close button aligns within the modal */
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+
+      .modal-header h2 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #333;
+      }
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .close:hover {
+        color: #f00;
+      }
+
+      .modal-body {
+        padding: 20px 0;
+        font-size: 1rem;
+        color: #555;
+      }
+
+      .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+      }
+
+      .book-now {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .book-now:hover {
+        background-color: #218838;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
     <script>
       function checkRequired() {
@@ -2285,7 +2430,6 @@
           document.getElementById("foodForm").submit(); // If form submission is needed
         }
       }
-
       // Validate max selections for each category
       function validateSelection(category, maxSelections = 1) {
         // Get all checkboxes for the given category
@@ -2313,40 +2457,78 @@
         }
       }
 
-      // Display selected items
       function verifyMenu() {
+        const modal = document.getElementById("menuModal");
         const output = document.getElementById("output");
         const selectedItems = [];
 
-        // Find all sections with h3 and corresponding inputs
+        // Gather selected items
         document.querySelectorAll(".category-box").forEach((category) => {
-          const categoryName = category.querySelector("h3").innerText; // Get the topic name
+          const categoryName = category.querySelector("h3").innerText;
           const selectedInputs = category.querySelectorAll(
             'input[type="checkbox"]:checked'
           );
 
-          // If any input is selected under this category, add it to the list
           if (selectedInputs.length > 0) {
             const selectedValues = Array.from(selectedInputs)
               .map((input) => input.value)
-              .join(", "); // Join multiple selections with a comma
+              .join(", ");
             selectedItems.push(
-              `<li><span style="color: blue;">${categoryName}:</span> <span style="color: green;">${selectedValues}</span></li>`
+              `<li><strong>${categoryName}:</strong> ${selectedValues}</li>`
             );
           }
         });
 
-        // Display the selected menu
+        if (selectedItems.length === 0) {
+          alert("Please select at least one item.");
+          return;
+        }
+
         output.innerHTML = `<h3>Selected Menu:</h3><ul>${selectedItems.join(
           ""
         )}</ul>`;
+        modal.style.display = "block";
       }
 
-      // document
-      //   .getElementById("menu-toggle")
-      //   .addEventListener("click", function () {
-      //     document.getElementById("navbar").classList.toggle("active");
-      //   });
+      function closeModal() {
+        const modal = document.getElementById("menuModal");
+        modal.style.display = "none";
+      }
+
+      function redirectToForm() {
+        const selectedItems = Array.from(
+          document.querySelectorAll('input[type="checkbox"]:checked')
+        ).map((input) => {
+          // Get the category (category name) from the checkbox name or container
+          const category = input.name; // Use the category name directly
+          return { category, value: input.value };
+        });
+
+        // Group selected items by category
+        const groupedItems = selectedItems.reduce(
+          (acc, { category, value }) => {
+            if (!acc[category]) acc[category] = [];
+            acc[category].push(value);
+            return acc;
+          },
+          {}
+        );
+
+        // Build the query string
+        const queryParams = Object.entries(groupedItems)
+          .map(([category, items]) => {
+            return items
+              .map(
+                (item) =>
+                  `${encodeURIComponent(category)}=${encodeURIComponent(item)}`
+              )
+              .join("&");
+          })
+          .join("&");
+
+        // Redirect to personal_form.html with the proper query string
+        window.location.href = `bookNow.html?${queryParams}`;
+      }
     </script>
   </body>
 </html>

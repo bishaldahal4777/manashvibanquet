@@ -3,55 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Book Now - Manashvi Banquet</title>
+    <title>Customized Pack Menu - Manashvi Banquet</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
-      <a href="#" class="logo"
-        ><img src="favicon.png" alt="Logo" /> Manashvi Banquet</a
-      >
-      <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="favicon.png" alt="Logo" /> Manashvi Banquet
+      </a>
+      <nav class="navbar" id="navbar">
         <a href="index.html">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#services">Services</a>
-        <a href="package.html">Package</a>
-        <a href="index.html#gallery">Gallery</a>
-        <a href="index.html#review">Review</a>
+        <a href="index.html#plan">Package</a>
+        <a href="gallery.html">Gallery</a>
         <a href="index.html#contact">Contact</a>
       </nav>
+      <button class="menu-toggle" id="menu-toggle"></button>
+      <!-- <i class="fas fa-bars"></i> -->
+      <!-- Hamburger icon -->
     </header>
 
-    <!-- Menu Section -->
-    <div class="container">
-      <h1 class="heading" id="eventHeading">Book Your Event</h1>
-    
-     <!-- Menu List Section -->
-<div class="menu-list">
-  <h2>See Full Menu of Below Package</h2>
-  <ul>
-    <li><a href="customizedPack.html">Customized Package</a></li>
-    <li><a href="VegPack.html">Veg Package</a></li>
-    <li><a href="GoldPack.html">Gold Package</a></li>
-    <li><a href="DiamondPack.html">Diamond Package</a></li>
-  </ul>
-</div>
+    <!-- Main Content Section -->
+    <form
+      action="https://formsubmit.co/bishaldahal4777@gmail.com"
+      method="post"
+    >
+      <section class="book-now">
+        <div class="container">
+          <h1 class="heading" id="eventHeading">Book Your Event</h1>
 
-    <!-- Book Now Section -->
-    <section class="book-now">
-      <div class="container">
-        <h1 class="heading" id="eventHeading">Book Your Event</h1>
-        <form
-          action="https://formsubmit.co/manushibanquet@gmail.com"
-          method="post"
-          class="booking-form"
-        >
           <div class="form-group">
             <label for="name">Full Name<span style="color: red">*</span></label>
             <input
@@ -83,10 +70,28 @@
               required
             />
           </div>
+          <label for="whaysapp-check">Does this number had whatsapp?</label>
+          <div>
+            <input
+              type="radio"
+              id="whaysapp-check"
+              name="whaysapp-check"
+              value="yes"
+            />
+            <label for="beverage">Yes</label>
+
+            <input
+              type="radio"
+              id="whaysapp-check"
+              name="whaysapp-check"
+              value="No"
+            />
+            <label for="beverage">No</label>
+          </div>
+          <label for="event-type"
+            >Event Type<span style="color: red">*</span></label
+          >
           <div class="form-group">
-            <label for="event-type"
-              >Event Type<span style="color: red">*</span></label
-            >
             <select id="event-type" name="event-type" required>
               <option value="">-- Select Event Type --</option>
               <option value="wedding">Wedding</option>
@@ -115,269 +120,633 @@
               placeholder="Enter number of guests"
               required
             />
-          </div>
-          <div class="form-group">
-            <label for="package1">Select Package</label>
-            <select
-              id="package1"
-              name="package1"
-              onchange="toggleSecondDropdown()"
-            >
-              <option value="">-- Select Package --</option>
-              <option value="customized">Customized Package</option>
-              <option value="veg">Veg Pack</option>
-              <option value="non-veg">Gold Pack</option>
-              <option value="non-veg">Diamond Pack</option>
-
-            </select>
+            <!-- beverages Package -->
           </div>
 
-          <!-- beverages Package -->
+          <!-- Display selected items -->
+          <h3>Selected Items:</h3>
+          <div id="selectedItems"></div>
 
-          <label for="beverage">Do you want beverages?</label>
-          <div>
-            <input type="checkbox" id="beverage" name="beverage" value="yes" />
-            <label for="beverage">Yes</label>
+          <input type="hidden" name="selectedMenu" id="hiddenSelectedMenu" />
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </section>
+    </form>
 
-            <input type="checkbox" id="beverage" name="beverage" value="No" />
-            <label for="beverage">No</label>
-          </div>
+    <!-- Footer Section -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box" data-aos="fade-up">
+          <h3><i class="fas fa-user"></i> Manashvi Banquet</h3>
+          <p>
+            We are a dedicated team of event planners, committed to making your
+            special occasion unforgettable and perfectly tailored to your
+            vision.
+          </p>
+        </div>
 
-          <button type="submit" class="btn">Book Now</button>
-        </form>
+        <div class="box" data-aos="fade-up">
+          <h3>Our Services</h3>
+          <a href="gallery.html"
+            ><i class="fas fa-chevron-right"></i> Professional Photo And Video
+            Services</a
+          >
+          <a href="gallery.html"
+            ><i class="fas fa-chevron-right"></i> Decor & Floral Arrangements</a
+          >
+          <a href="gallery.html"
+            ><i class="fas fa-chevron-right"></i> Food Court</a
+          >
+          <a href="gallery.html"
+            ><i class="fas fa-chevron-right"></i> Extra Services</a
+          >
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <h3>Contact Us</h3>
+          <a href="tel:+9779851125946"
+            ><i class="fas fa-phone"></i> +977-951125946</a
+          >
+          <a href="tel:+9779851110608"
+            ><i class="fas fa-phone"></i> +977-9851110608</a
+          >
+          <a href="mailto:manashvibanquet@gmail.com"
+            ><i class="fas fa-envelope"></i> manashvibanquet@gmail.com</a
+          >
+          <a
+            href="https://www.google.com/maps?q=27.698193776187804,85.36464617546706"
+            ><i class="fas fa-map"></i> Kageshwori Manohara 9, Kathmandu,
+            Nepal</a
+          >
+        </div>
+
+        <div class="box" data-aos="fade-up">
+          <h3>Follow Us</h3>
+          <a href="https://www.facebook.com/profile.php?id=100064107932777">
+            <i class="fab fa-facebook-f"></i> facebook
+          </a>
+          <a href="https://www.youtube.com/@manashvibanquetp.ltd.5269">
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+          <a
+            href="https://www.instagram.com/explore/locations/102071131359514/manashvi-banquet-pvt-ltd/"
+          >
+            <i class="fab fa-instagram"></i> instagram
+          </a>
+          <a href="https://www.tiktok.com/@manashvibanquet?_t=8rxP3kbE6hc&_r=1">
+            <i class="fab fa-tiktok"></i> TikTok
+          </a>
+          <a href="https://www.bishaldahal20.com.np" target="_blank">
+            <i class="fas fa-globe"></i> Website
+          </a>
+        </div>
+      </div>
+
+      <div class="credit">
+        &copy; copyright @ 2024 by <span>manashvibanquet</span>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2024 Manashvi Banquet. All rights reserved.</p>
-    </footer>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <style>
-    /* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
 
-/* Header Styles */
-.header {
-  background: #f5f5f5;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  flex-wrap: wrap;
-}
+      /* Header Styles */
 
-.header .logo img {
-  height: 40px;
-  margin-right: 10px;
-}
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 9%;
+        background: var(--white);
+        box-shadow: var(--box-shadow);
+      }
 
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-}
+      .header .logo {
+        font-size: 2.2rem;
+        font-weight: bolder;
+        color: var(--primary-color);
+      }
 
-.navbar a {
-  color: #333;
-  margin: 0 10px;
-  text-decoration: none;
-}
+      .header .logo i {
+        color: var(--main-color);
+        padding-right: 0.5rem;
+      }
 
-/* Menu Section */
-.menu-list {
-  margin-bottom: 20px;
-  padding: 15px;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
+      .header .navbar a {
+        font-size: 1.7rem;
+        margin-left: 2rem;
+        color: var(--primary-color);
+        padding-block: 1.6rem;
+        position: relative;
+      }
 
-.menu-list h2 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #333;
-  text-align: center;
-}
+      .header .navbar a:hover {
+        color: var(--main-color);
+      }
 
-.menu-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+      .header .navbar a::before {
+        content: "";
+        position: absolute;
+        height: 0.3rem;
+        border-block: 1px solid var(--main-color);
+        bottom: 0.5rem;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: 0.5s ease;
+      }
 
-.menu-list li {
-  background-color: #f4f4f4;
-  padding: 12px 20px;
-  font-size: 16px;
-  color: #555;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+      .header .navbar a:is(:hover, :focus)::before {
+        transform: scaleX(1);
+      }
 
-.menu-list li:hover {
-  background-color: #ffcc00;
-  color: #fff;
-  transform: scale(1.05);
-}
+      .header .icons div {
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        font-size: 2rem;
+        border-radius: 0.5rem;
+        margin-left: 0.5rem;
+        cursor: pointer;
+        color: var(--primary-color);
+        background: var(--main-color);
+        text-align: center;
+      }
+      .header .icons div:hover {
+        color: var(--main-color);
+        background: var(--primary-color);
+      }
 
-.menu-list li a {
-  color: inherit;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  transition: color 0.3s ease;
-}
+      #menu {
+        display: none;
+      }
 
-.menu-list li a:hover {
-  color: #fff;
-}
+      /* Menu */
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
 
-/* Book Now Section */
-.book-now {
-  padding: 50px 20px;
-  background: #f4f4f4;
-}
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: #444;
+        /* background-color: yellow; */
+        display: inline-block; /* Restrict background to the text */
+      }
 
-.book-now .heading {
-  text-align: center;
-  margin-bottom: 20px;
-}
+      /* Book Now Section */
+      .book-now {
+        padding: 50px 20px;
+        background: #f4f4f4;
+      }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+      .book-now .heading {
+        text-align: center;
+        margin-bottom: 20px;
+      }
 
-.form-group {
-  margin-bottom: 15px;
-}
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
+      .form-group {
+        margin-bottom: 15px;
+      }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
 
-/* Custom Menu Styles */
-#menuForm {
-  margin-top: 15px;
-}
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
 
-#menuForm select {
-  height: auto;
-  min-height: 120px;
-}
+      .item-name-contain {
+        font-size: 16px; /* Adjust text size */
+        margin: 10px; /* Spacing around the div */
+        text-align: left; /* Align text within the div to the left */
+        width: auto; /* Let width adjust to the content */
+      }
 
-.btn {
-  display: inline-block;
-  background: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  text-align: center;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
-.btn:hover {
-  background: #0056b3;
-}
+        .navbar {
+          flex-direction: column;
+          gap: 10px;
+        }
 
-/* Footer Styles */
-.footer {
-  text-align: center;
-  padding: 10px 20px;
-  background: #333;
-  color: #fff;
-}
+        .container {
+          padding: 15px;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+        .form-group label {
+          font-size: 14px;
+        }
 
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-  }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+          font-size: 14px;
+        }
 
-  .container {
-    padding: 15px;
-  }
+        .btn {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
 
-  .form-group label {
-    font-size: 14px;
-  }
+      @media (max-width: 480px) {
+        .header {
+          padding: 10px 15px;
+        }
 
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-size: 14px;
-  }
+        .navbar a {
+          font-size: 14px;
+        }
 
-  .btn {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
+        .container {
+          padding: 10px;
+        }
 
-@media (max-width: 480px) {
-  .header {
-    padding: 10px 15px;
-  }
+        .form-group label {
+          font-size: 12px;
+        }
 
-  .navbar a {
-    font-size: 14px;
-  }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+          font-size: 12px;
+        }
 
-  .container {
-    padding: 10px;
-  }
+        .btn {
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+      }
+      /* footer */
 
-  .form-group label {
-    font-size: 12px;
-  }
+      .footer {
+        background: var(--white);
+      }
 
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-size: 12px;
-  }
+      .footer .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+      }
 
-  .btn {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-}
+      .footer .box-container .box {
+        padding: 1rem 0;
+      }
 
-  </style>
+      .footer .box-container .box h3 {
+        font-size: 2.2rem;
+        color: var(--primary-color);
+        padding: 1rem 0;
+      }
 
-    <script src="bookNow.js"></script>
+      .footer .box-container .box p {
+        font-size: 1.5rem;
+        color: var(--main-color);
+        padding: 1rem 0;
+        line-height: 2;
+      }
+
+      .footer .box-container .box a {
+        display: block;
+        font-size: 1.4rem;
+        color: var(--main-color);
+        padding: 1rem 0;
+      }
+
+      .footer .box-container .box a i {
+        padding-right: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      .footer .box-container .box a:hover {
+        color: var(--primary-color);
+      }
+
+      .footer .credit {
+        margin-top: 2.5rem;
+        padding: 1rem;
+        padding-top: 2rem;
+        border-top: 0.1rem solid #cecece;
+        text-align: center;
+        color: var(--main-color);
+        font-size: 2rem;
+      }
+
+      .footer .credit span {
+        color: var(--primary-color);
+      }
+
+      /* Responsive Navbar */
+      @media (max-width: 768px) {
+        .navbar {
+          display: none; /* Hide menu on mobile */
+          flex-direction: column; /* Stack items vertically */
+          width: 100%;
+          background-color: #f5f5f5;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          padding: 20px 0;
+        }
+
+        .navbar.active {
+          display: flex;
+        }
+
+        .navbar a {
+          padding: 10px;
+          text-align: center;
+          width: 100%;
+          border-top: 1px solid #ddd;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+      }
+
+      /* Category container for gallery layout */
+      .category-container {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(200px, 1fr)
+        ); /* Adjusts grid columns */
+        gap: 15px; /* Ensures equal space between items */
+        padding: 15px;
+      }
+
+      /* Category box to resemble gallery items */
+      .category-box {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .category-box:hover {
+        transform: scale(1.05); /* Hover effect to enlarge the box */
+      }
+
+      .category-box h3 {
+        text-align: center;
+        color: #f45866;
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+      }
+
+      .category-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .category-box ul li {
+        margin: 5px 0;
+        font-size: 12px;
+        color: #333;
+        text-align: center;
+      }
+
+      /* Add distinct styles for Extra Charge items */
+      .extra-box .category-box {
+        background-color: #e8f4fc; /* Light blue shade */
+        border-color: #87ceeb;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .category-box {
+          flex: 1 1 calc(33.33% - 20px); /* 3 boxes per row */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .category-box {
+          flex: 1 1 calc(33.33% - 20px); /* 2 boxes per row */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .category-box {
+          flex: 1 1 calc(50% - 20px);
+        }
+      }
+
+      /* Categories Section */
+      .categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+        gap: 10px;
+      }
+
+      .categories button {
+        background: none;
+        border: 2px solid #ccc;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.3s;
+        white-space: nowrap;
+      }
+
+      .categories button.active {
+        border-color: #ff6347;
+        color: #ff6347;
+      }
+
+      .categories button:hover {
+        background-color: #ff6347;
+        color: white;
+      }
+      /* Centered Book Now Button */
+      .book-now-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px; /* Add space from the content above */
+      }
+
+      .book-now-btn {
+        background-color: #ff6347; /* Tomato color */
+        color: white;
+        padding: 15px 30px; /* Top/Bottom and Left/Right padding */
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 30px; /* Add bottom margin to give space at the bottom */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .book-now-btn:hover {
+        background-color: #e04f34; /* Darker red on hover */
+        transform: scale(1.05); /* Slightly enlarge the button on hover */
+      }
+
+      .book-now-btn:focus {
+        outline: none; /* Remove focus outline */
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+      }
+      /* Gallery Header */
+      .gallery-header {
+        text-align: center;
+        margin: 40px 0;
+        padding-top: 70px;
+      }
+
+      .gallery-header h1 {
+        font-size: 36px;
+        color: #333;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .navbar {
+          width: 100%;
+          flex-direction: column;
+          gap: 10px;
+          align-items: flex-start;
+        }
+
+        .categories button {
+          padding: 8px 10px;
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-header h1 {
+          font-size: 24px;
+        }
+
+        .categories {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .navbar {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: #f5f5f5;
+          padding: 10px;
+          position: absolute;
+          top: 60px; /* Adjust based on header height */
+          left: 0;
+          z-index: 1000;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar.active {
+          display: flex;
+        }
+
+        .navbar a {
+          padding: 10px 15px;
+          border-bottom: 1px solid #ccc;
+        }
+
+        .navbar a:last-child {
+          border-bottom: none;
+        }
+      }
+    </style>
+
+    <script>
+      // Get selected items from query parameters
+      const params = new URLSearchParams(window.location.search);
+
+      // Object to store selected items by category
+      const groupedItems = {};
+
+      // Group items by category
+      params.forEach((value, key) => {
+        if (!groupedItems[key]) {
+          groupedItems[key] = [];
+        }
+        groupedItems[key].push(value);
+      });
+
+      // Generate the display for selected items
+      const selectedItemsDisplay = Object.keys(groupedItems)
+        .map(
+          (category) =>
+            `<li>${category}: <span style="color: green;">${groupedItems[
+              category
+            ].join(", ")}</span></li>`
+        )
+        .join("");
+
+      // Display the grouped selected items
+      document.getElementById(
+        "selectedItems"
+      ).innerHTML = `<ul>${selectedItemsDisplay}</ul>`;
+
+      // Prepare the hidden input value
+      const selectedItemsFlat = Object.entries(groupedItems)
+        .map(([category, items]) => `${category}: ${items.join(", ")}`)
+        .join("; ");
+      document.getElementById("hiddenSelectedMenu").value = selectedItemsFlat;
+    </script>
   </body>
 </html>
-<!-- <div class="form-group" id="menuForm" style="display: none"> -->

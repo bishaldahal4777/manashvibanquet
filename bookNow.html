@@ -31,10 +31,7 @@
     </header>
 
     <!-- Main Content Section -->
-    <form
-      action="https://formsubmit.co/bishaldahal4777@gmail.com"
-      method="post"
-    >
+    <form id="contact-form">
       <section class="book-now">
         <div class="container">
           <h1 class="heading" id="eventHeading">Book Your Event</h1>
@@ -88,7 +85,7 @@
             />
             <label for="beverage">No</label>
           </div>
-           <label for="event-type"
+          <label for="event-type"
             >Choose Your Selected Package<span style="color: red"
               >*</span
             ></label
@@ -724,7 +721,18 @@
         }
       }
     </style>
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "lVxHL4EYxViowBs8J",
+        });
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script>
       // Get selected items from query parameters
       const params = new URLSearchParams(window.location.search);
@@ -760,6 +768,71 @@
         .map(([category, items]) => `${category}: ${items.join(", ")}`)
         .join("; ");
       document.getElementById("hiddenSelectedMenu").value = selectedItemsFlat;
+
+      // Handle form submission
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Get form data declare
+          const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            whatsapp_check: document.querySelector(
+              'input[name="whaysapp-check"]:checked'
+            )
+              ? document.querySelector('input[name="whaysapp-check"]:checked')
+                  .value
+              : "",
+            plan: document.querySelector('select[name="plan"]').value,
+            eventType: document.getElementById("event-type").value,
+            date: document.getElementById("date").value,
+            guests: document.getElementById("guests").value,
+            selectedMenu: document.getElementById("hiddenSelectedMenu").value, // Assuming this value is populated somewhere
+          };
+
+          // Send email to the owner
+          emailjs.send("service_tsp37wa", "template_l7hin2w", formData).then(
+            function (response) {
+              console.log("Message sent successfully to the owner:", response);
+              alert("Message sent successfully to the owner!");
+            },
+            function (error) {
+              console.error("Error sending email to owner:", error);
+              alert("Failed to send email to owner.");
+            }
+          );
+
+          // Send confirmation email to the user
+          const userEmailTemplateData = {
+            user_name: formData.name, // User's name
+            user_email: formData.email, // User's email
+            user_phone: formData.phone, // User's phone
+            user_whatsapp_check: formData.whatsapp_check, // User's whatsapp availability
+            user_plan: formData.plan, // User's selected package
+            user_event_type: formData.eventType, // User's event type
+            user_date: formData.date, // User's event date
+            user_guests: formData.guests, // User's number of guests
+            user_selected_menu: formData.selectedMenu, // User's selected menu
+          };
+
+          // Send email to the user with confirmation
+          emailjs
+            .send("service_tsp37wa", "template_60wkvbo", userEmailTemplateData)
+            .then(
+              function (response) {
+                console.log("Confirmation email sent to the user:", response);
+              },
+              function (error) {
+                console.error("Error sending confirmation email:", error);
+              }
+            );
+
+          // Reset the form after submission
+          document.getElementById("contact-form").reset();
+        });
     </script>
   </body>
 </html>

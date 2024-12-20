@@ -796,12 +796,12 @@
           // Send email to the owner
           emailjs.send("service_tsp37wa", "template_l7hin2w", formData).then(
             function (response) {
-              console.log("Message sent successfully to the owner:", response);
-              alert("Message sent successfully to the owner!");
+
+              alert(""Thank you for reaching out! Your message has been successfully sent to Manashvi. We will review your inquiry and get back to you shortly. If you have any urgent questions, please feel free to contact us again."");
             },
             function (error) {
-              console.error("Error sending email to owner:", error);
-              alert("Failed to send email to owner.");
+
+              alert("Oops! Something went wrong while sending your message. Please try again later. If the issue persists, feel free to contact us directly.");
             }
           );
 
@@ -823,10 +823,10 @@
             .send("service_tsp37wa", "template_60wkvbo", userEmailTemplateData)
             .then(
               function (response) {
-                console.log("Confirmation email sent to the user:", response);
+
               },
               function (error) {
-                console.error("Error sending confirmation email:", error);
+
               }
             );
 

@@ -1614,6 +1614,77 @@
         font-weight: bold; /* Optional: Make it bold */
         line-height: 1.5; /* Optional: Adjust line spacing for better readability */
       }
+            /* Styles specifically for small phones */
+      @media (max-width: 480px) {
+        .main-box {
+          padding: 8px; /* Reduce padding for smaller screens */
+          width: 100%; /* Full width */
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        .main-box h2 {
+          background-position: center center;
+          font-size: 0.7rem; /* Further reduce font size for small screens */
+          padding: 8px; /* Adjust inner padding */
+        }
+      }
+
+      /* Styles for small phones */
+      @media (max-width: 480px) {
+        .gallery-header {
+          width: 95%; /* Maximize width within the viewport */
+          padding: 15px; /* Reduce padding for smaller screens */
+          margin: 10px auto; /* Adjust margins */
+          box-shadow: none; /* Optional: Simplify shadow for performance */
+        }
+
+        .gallery-header h1 {
+          font-size: 1.5rem; /* Slightly smaller font size */
+          margin-bottom: 10px; /* Reduce spacing */
+        }
+
+        .gallery-header .item-name-contain {
+          gap: 5px; /* Reduce spacing between items */
+        }
+
+        .gallery-header .item-name-contain p {
+          background-position: center center;
+          font-size: 0.8rem; /* Smaller text size */
+          padding: 8px; /* Adjust padding inside the element */
+          width: 100%; /* Full width for better readability */
+          line-height: 1.2; /* Adjust line height for compact text */
+        }
+      }
+      /* Styles for medium screens (768px to 1023px) */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .main-box {
+          background-size: contain; /* Ensures the image fits within the container */
+          background-position: center top; /* Aligns the image better for medium screens */
+          padding: 15px; /* Slightly more padding */
+          width: 90%; /* Adjust width for better responsiveness */
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
+        }
+
+        .gallery-header {
+          width: 90%; /* Maximize the header width within the viewport */
+          padding: 20px; /* Comfortable padding for medium screens */
+          margin: 15px auto; /* Center the gallery header */
+        }
+
+        .gallery-header h1 {
+          font-size: 1.8rem; /* Adjust font size for readability */
+          margin-bottom: 15px; /* Balanced spacing */
+        }
+
+        .gallery-header .item-name-contain p {
+          background-size: cover; /* Ensures text backgrounds look good */
+          background-position: center; /* Centers the image on text */
+          font-size: 1rem; /* Adjust font size for better readability */
+          padding: 10px; /* Adjust inner spacing */
+          width: auto; /* Allow content to determine width */
+          line-height: 1.4; /* Improves readability */
+        }
+      }
+
       .menu-toggle {
         display: none;
         font-size: 30px;
